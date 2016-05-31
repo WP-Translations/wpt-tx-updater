@@ -64,7 +64,7 @@ class WPTXU_Transifex_API
 
     public function get_translation( $resource, $lang_code ) {
 
-        $api_endpoint = $this->api_url . $this->slug . '/resource/' . $resource . '/translation/' . $lang_code . '/?mode=onlyreviewed';
+        $api_endpoint = $this->api_url . $this->slug . '/resource/' . $resource . '/translation/' . $lang_code . '/?mode=onlytranslated';
         $prefix_action = '_tx_translation_' . $lang_code;
 
         return $this->get_remote_data( $api_endpoint, $prefix_action, $resource );
