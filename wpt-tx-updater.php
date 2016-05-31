@@ -76,14 +76,19 @@ add_action( 'plugins_loaded', 'wptxu_init' );
  */
 function wptxu_load_plugin_textdomain() {
 
+	if ( is_dir( WPTXU_CONTENT_PATH . '/plugins' ) ) {
+
 	$domains = array_diff( scandir( WPTXU_CONTENT_PATH . '/plugins' ), array( ".", ".." ) );
 
-	foreach ( $domains as $domain ) {
-		$locale = apply_filters( 'plugin_locale', get_locale(), $domain );
-		
-		load_plugin_textdomain( $domain, false, plugin_basename( dirname( __FILE__ ) ) . '/languages/plugins/' . $domain . '/' . $locale . '/' );
-		
+		foreach ( $domains as $domain ) {
+			$locale = apply_filters( 'plugin_locale', get_locale(), $domain );
+			
+			load_plugin_textdomain( $domain, false, plugin_basename( dirname( __FILE__ ) ) . '/languages/plugins/' . $domain . '/' . $locale . '/' );
+			
+		}
+
 	}
+	
 }
 add_action( 'plugins_loaded', 'wptxu_load_plugin_textdomain', 0 );
 
