@@ -3,7 +3,7 @@
 Plugin Name: WP Transifex Updater
 Plugin URI:  http://wp-translations.org/
 Description: Update translations from Transifex. 
-Version:     1.0
+Version:     1.0.1
 Author:      WP-Translations
 Author URI:  http://wp-translations.org/
 License:     GPL2
@@ -14,6 +14,7 @@ Text Domain: wpt-tx-updater
 
 defined( 'ABSPATH' ) or die( 'Cheatin&#8217; uh?' );
 
+define( 'WPTXU_PLUGIN_SLUG', 'wpt-tx-updater');
 define( 'WPTXU_FILE', __FILE__ );
 define( 'WPTXU_URL', plugin_dir_url( WPTXU_FILE ) );
 define( 'WPTXU_PATH', realpath( plugin_dir_path( WPTXU_FILE ) ) . '/' );
@@ -21,6 +22,7 @@ define( 'WPTXU_INC_PATH', realpath( WPTXU_PATH . 'inc' ) . '/' );
 define( 'WPTXU_CLASSES_PATH', realpath( WPTXU_INC_PATH . 'classes' ) . '/' );
 define( 'WPTXU_ADMIN_PATH', realpath( WPTXU_INC_PATH . 'admin' ) . '/' );
 define( 'WPTXU_FUNCTIONS_PATH', realpath( WPTXU_INC_PATH . 'functions' ) . '/' );
+define( 'WPTXU_COMMON_PATH', realpath( WPTXU_INC_PATH . 'common' ) . '/' );
 define( 'WPTXU_ADMIN_UI_PATH', realpath( WPTXU_ADMIN_PATH . 'ui' ) . '/' );
 define( 'WPTXU_API_PATH', realpath( WPTXU_INC_PATH . 'api' ) . '/' );
 define( 'WPTXU_LIBS_PATH', realpath( WPTXU_INC_PATH . 'libs' ) . '/' );
@@ -41,16 +43,15 @@ function wptxu_init() {
 	if ( is_admin() ) {
 
 		require( WPTXU_ADMIN_PATH . 'enqueue.php' );
-		//require( WPTXU_ADMIN_PATH . 'ajax.php' );
 		require( WPTXU_FUNCTIONS_PATH . 'functions.php' );
 		require( WPTXU_FUNCTIONS_PATH . 'files.php' );
 		require( WPTXU_FUNCTIONS_PATH . 'dates.php' );
 		require( WPTXU_ADMIN_PATH . 'options.php' );
 		require( WPTXU_ADMIN_UI_PATH . 'options.php' );
 		require( WPTXU_ADMIN_PATH . 'custom-post-type.php' );
-		require( WPTXU_ADMIN_PATH . 'custom-taxonomy.php' );
 		require( WPTXU_ADMIN_UI_PATH . 'meta-boxes.php' );
 		require( WPTXU_ADMIN_UI_PATH . 'notices.php' );
+		require( WPTXU_COMMON_PATH . 'translation.php' );
 		require( WPTXU_API_PATH . 'wptxu-transifex-api.php' );
 		require( WPTXU_CLASSES_PATH . 'wptxu-translation.php' );
 
@@ -64,6 +65,8 @@ function wptxu_init() {
 		}
 
 	}
+
+	require( WPTXU_COMMON_PATH . 'admin-bar.php' );
 
 }
 add_action( 'plugins_loaded', 'wptxu_init' );
@@ -102,7 +105,6 @@ register_activation_hook( __FILE__, 'wptxu_activation' );
 function wptxu_activation() {
 
 	require( WPTXU_ADMIN_PATH . 'custom-post-type.php' );
-	require( WPTXU_ADMIN_PATH . 'custom-taxonomy.php' );
 	flush_rewrite_rules();
 
 }

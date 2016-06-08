@@ -1,0 +1,43 @@
+#wpadminbar [id*=wptxu-up-tx-] {
+	width: 250px;
+}
+
+#wpadminbar .flag-icon {
+	width: 17.3333px !important;
+	height: 32px !important;
+}
+
+#wpadminbar .wptxu-project-infos {
+	padding: .5em;
+}
+
+#wpadminbar .wptxu-project-infos p {
+	text-align: center;
+	padding-bottom: 1em;
+}
+
+#wpadminbar .wptxu-project-infos button {
+	border-radius: 3px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+#wpadminbar ul.wptxu-response-list {
+	padding: .5em 0 .5em 1em;
+	border-top: 1px solid rgba(0,0,0, .1);
+}
+#wpadminbar ul.wptxu-response-list li {
+	list-style-position: inside !important;
+	list-style: square !important;
+	font-size: .9em !important;
+}
+#wpadminbar ul.wptxu-response-list li.check-api {
+	list-style: none !important;
+}
+#wpadminbar li.check-api:before {
+	position: relative;
+	top: 5px;
+	content: "\f463";
+    font: normal 20px/1 dashicons;
+    color: rgba(240,245,250,0.6);
+}

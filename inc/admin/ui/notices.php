@@ -4,15 +4,16 @@ defined( 'ABSPATH' ) or die( 'Cheatin&#8217; uh?' );
 /**
  * This warning is displayed when Credentials are empty
  *
- * @since 1.0.0
+ * @since 1.0.1
  */
-//add_action( 'all_admin_notices', 'wptxu_empty_credentials' );
+add_action( 'all_admin_notices', 'wptxu_empty_credentials' );
 function wptxu_empty_credentials() {
-	?>
-    <div class="notice notice-warning is-dismissible">
-        <p><?php _e( 'WPT Transifex Updater need your Transifex credentials to work ! ', 'wpt-tx-updater' ); ?></p>
-	<?php wptxu_extra_profile_fields( get_current_user_id() );?>
+	$user_id = get_current_user_id();
+	if ( ! get_the_author_meta( 'wptxu_transifex_auth', $user_id ) ) :
 
+	?>
+    <div class="notice notice-warning">
+        <p><?php _e( 'In order to use WPT Transifex Updater, please <a href="profile.php#wptxu-transifex-account">register your credentials</a>. ', 'wpt-tx-updater' ); ?></p>
     </div>
-    <?php
+    <?php endif;
 }

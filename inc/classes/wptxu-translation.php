@@ -28,24 +28,24 @@ class WPTXU_Translation
 
 		if ( ! is_dir( $this->text_domain_path ) ) {
 			wptxu_mkdir_p( $this->text_domain_path );
-			echo '<li class="wptxu-success">' . __( 'Translation folder created.', 'wp-translations-server' ) . '</li>';
+			echo '<li class="wptxu-success">' . __( 'Translation folder created.', 'wpt-tx-updater' ) . '</li>';
 	    }
 	    
-	    if ( false === $this->_is_up_to_date() ) {
+	    //if ( false === $this->_is_up_to_date() ) {
 
 	    	$this->_save_po_file();
 	    	$this->_create_mo_file();
 	    	$this->_create_readme_file();
 	    	$this->_is_up_to_date();
 
-		}
+		//}
  
 	}
 
 	private function _save_po_file() {
 
 		$po_file = wptxu_put_content( $this->po_file_path,  $this->content );
-		echo '<li class="wptxu-success">'. __( 'Save po file on local filesystem.', 'wp-translations-server' ) .'</li>';		
+		echo '<li class="wptxu-success">'. __( 'Import po file on local filesystem.', 'wpt-tx-updater' ) .'</li>';		
 		
 	}
 
@@ -53,7 +53,7 @@ class WPTXU_Translation
 
 		$file = Translations::fromPoFile( $this->po_file_path );
 	    $file->toMoFile( $this->mo_file_path );
-	    echo '<li class="wptxu-success">'. __( 'Create and save mo file on local filesystem.', 'wp-translations-server' ) .'</li>';
+	    echo '<li class="wptxu-success">'. __( 'Create mo file on local filesystem.', 'wpt-tx-updater' ) .'</li>';
 	}
 
 	private function _create_readme_file() {
@@ -64,7 +64,7 @@ class WPTXU_Translation
 		$txt .= 'Last commiter : '. $this->project->last_commiter . "\r\n";
 
 		$readme_content = wptxu_put_content( $this->text_domain_path . 'readme.txt', $txt );
-		echo '<li class="wptxu-success">'. __( 'Create and save readme file on local filesystem.', 'wp-translations-server' ) .'</li>';
+		echo '<li class="wptxu-success">'. __( 'Create readme file on local filesystem.', 'wpt-tx-updater' ) .'</li>';
 	}
 
 	private function _is_up_to_date() {
@@ -76,7 +76,7 @@ class WPTXU_Translation
 
 			if ( strtotime( $this->project->last_update ) == strtotime( $readme['last_update'] ) ) {
 
-				echo '<li>' . __( 'Translation is up to date !', 'wpt-tx-updater' ) . ' - ' .  __('Last update', 'wpt-tx-updater') . '&nbsp;:&nbsp;' . $readme['last_update'] . '</li>';
+				echo '<li>' . __( 'Translation is up to date !', 'wpt-tx-updater' ) . '</li>';
 				return true;
 
 			} else {

@@ -2,8 +2,10 @@
 defined( 'ABSPATH' ) or die( 'Cheatin&#8217; uh?' );
 
 /**
-* 
-*/
+ * Class from Transifex API
+ *
+ * @since 1.0.0
+ */
 class WPTXU_Transifex_API
 {
 
@@ -33,9 +35,10 @@ class WPTXU_Transifex_API
     public function get_remote_data( $api_endpoint, $prefix_action, $resource ) {
 
         $cached = wp_remote_get( $api_endpoint, $this->args );
+        $http_code = wp_remote_retrieve_response_code( $cached );
 
-        if ( is_wp_error( $cached ) ) {
-            $response = $cached->get_error_message();
+        if ( $http_code != '200' ) {
+            $response = $http_code;
         } else {
             $response = json_decode( wp_remote_retrieve_body( $cached ) );
         }
@@ -64,7 +67,7 @@ class WPTXU_Transifex_API
 
     public function get_translation( $resource, $lang_code ) {
 
-        $api_endpoint = $this->api_url . $this->slug . '/resource/' . $resource . '/translation/' . $lang_code . '/?mode=onlytranslated';
+        $api_endpoint = $this->api_url . $this->slug . '/resource/' . $resource . '/translation/' . $lang_code . '/?mode=onlyreviewed';
         $prefix_action = '_tx_translation_' . $lang_code;
 
         return $this->get_remote_data( $api_endpoint, $prefix_action, $resource );

@@ -11,9 +11,11 @@ add_action( 'edit_user_profile', 'wptxu_extra_profile_fields' );
  
 function wptxu_extra_profile_fields( $user ) { ?>
  
-    <h3 id="#wptxu-transifex-account"><?php _e( 'Transifex Account Informations', 'wpt-tx-updater' ); ?></h3>
+    <h3 id="wptxu-transifex-account"><?php _e( 'Transifex Account Informations', 'wpt-tx-updater' ); ?></h3>
  
     <table class="form-table">
+
+    <?php if( ! get_the_author_meta( 'wptxu_transifex_auth', $user->ID ) ) : ?>
  
         <tr>
             <th><label for="wptxu-tx-username"><?php _e( 'Transifex Username', 'wpt-tx-updater' ); ?></label></th>
@@ -32,6 +34,16 @@ function wptxu_extra_profile_fields( $user ) { ?>
                 <span class="description"><?php _e( 'Please enter your Transifex password.', 'wpt-tx-updater' ); ?></span>
             </td>
         </tr>
+
+        <?php else: ?>
+
+        <tr>
+            <th><?php _e('Connected as&nbsp;:&nbsp;', 'wpt-tx-updater');?></th>
+            <td><?php echo get_the_author_meta( 'wptxu_transifex_user', $user->ID ); ?></td>
+            <td> <button type="submit" value="wptxu-tx-loggout" name="wptxu-tx-loggout" class="button button-secondary"><?php _e( 'Loggout', 'wpt-tx-updater' ); ?></button></td>
+        </tr>
+
+         <?php endif; ?>
  
     </table>
 <?php }
