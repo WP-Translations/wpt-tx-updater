@@ -28,7 +28,7 @@ function wptxu_admin_bar( $wp_admin_bar ) {
 		'parent'	=> 'wptxu_setting_group',
 		'id' 		=> 'Settings',
 		'title' 	=> __( 'Settings', 'wpt-tx-updater' ),
-		'href' 		=> 'profile.php#wptxu-transifex-account',
+		'href' 		=> admin_url() . 'profile.php#wptxu-transifex-account',
 	));
 
 	$user_id = get_current_user_id();
@@ -67,4 +67,35 @@ function wptxu_admin_bar( $wp_admin_bar ) {
 
 	}
 
+}
+
+/**
+ * Include Admin Bar styles in front
+ *
+ * @since  1.0.2
+ */
+add_action( 'admin_bar_init', 'wptxu_admin_bar_styles' );
+function wptxu_admin_bar_styles() {
+	
+	if( ! is_admin() || is_admin_bar_showing() ) {
+
+		$translation_array = array(
+			'ajax_loading' => __( 'Check for update...', 'wpt-tx-updater' ),
+		);
+
+		wp_register_style( 'wptxu-styles', WPTXU_URL_ASSETS_CSS . 'wptxu-styles.css' );
+		wp_enqueue_style( 'wptxu-styles' );
+		wp_register_style( 'wptxu-flags', WPTXU_URL_ASSETS_CSS . 'flag-icon.min.css' );
+		wp_enqueue_style( 'wptxu-flags' );
+
+		wp_enqueue_script( 'wptxu-script', WPTXU_URL_ASSETS_JS . 'script.js', array( 'jquery' ), '1.0.0', false );
+
+		wp_localize_script( 'wptxu-script', 'wptxu_ajax', array(
+			'ajaxurl' => admin_url( 'admin-ajax.php' ),
+			'ajax_loading' => $translation_array,
+			'wptxu_nonce' => wp_create_nonce( 'wptxu-nonce' ),
+		) );
+
+	}
+	
 }
