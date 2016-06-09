@@ -1,0 +1,259 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"Project-Id-Version: WP Transifex Updater\n"
+"POT-Creation-Date: 2016-06-09 10:19+0200\n"
+"PO-Revision-Date: 2016-06-09 09:53+0200\n"
+"Last-Translator: FX Bénard <fx@fxbenard.com>\n"
+"Language-Team: FX Bénard <fx@fxbenard.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.8\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-WPHeader: wpt-tx-updater.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Poedit-SearchPathExcluded-1: inc/libs\n"
+
+#: inc/admin/custom-post-type.php:12
+msgctxt "Post Type General Name"
+msgid "Projects"
+msgstr ""
+
+#: inc/admin/custom-post-type.php:13
+msgctxt "Post Type Singular Name"
+msgid "Project"
+msgstr ""
+
+#: inc/admin/custom-post-type.php:14
+msgid "TX Projects"
+msgstr ""
+
+#: inc/admin/custom-post-type.php:15
+msgid "Post Type"
+msgstr ""
+
+#: inc/admin/custom-post-type.php:16
+msgid "Item Archives"
+msgstr ""
+
+#: inc/admin/custom-post-type.php:17
+msgid "Parent Item:"
+msgstr ""
+
+#: inc/admin/custom-post-type.php:18
+msgid "All Items"
+msgstr ""
+
+#: inc/admin/custom-post-type.php:19
+msgid "Add New Item"
+msgstr ""
+
+#: inc/admin/custom-post-type.php:20
+msgid "Add New"
+msgstr ""
+
+#: inc/admin/custom-post-type.php:21
+msgid "New Item"
+msgstr ""
+
+#: inc/admin/custom-post-type.php:22
+msgid "Edit Item"
+msgstr ""
+
+#: inc/admin/custom-post-type.php:23
+msgid "Update Item"
+msgstr ""
+
+#: inc/admin/custom-post-type.php:24
+msgid "View Item"
+msgstr ""
+
+#: inc/admin/custom-post-type.php:25
+msgid "Search Item"
+msgstr ""
+
+#: inc/admin/custom-post-type.php:26
+msgid "Not found"
+msgstr ""
+
+#: inc/admin/custom-post-type.php:27
+msgid "Not found in Trash"
+msgstr ""
+
+#: inc/admin/custom-post-type.php:28
+msgid "Featured Image"
+msgstr ""
+
+#: inc/admin/custom-post-type.php:29
+msgid "Set featured image"
+msgstr ""
+
+#: inc/admin/custom-post-type.php:30
+msgid "Remove featured image"
+msgstr ""
+
+#: inc/admin/custom-post-type.php:31
+msgid "Use as featured image"
+msgstr ""
+
+#: inc/admin/custom-post-type.php:32
+msgid "Insert into item"
+msgstr ""
+
+#: inc/admin/custom-post-type.php:33
+msgid "Uploaded to this item"
+msgstr ""
+
+#: inc/admin/custom-post-type.php:34
+msgid "Items list"
+msgstr ""
+
+#: inc/admin/custom-post-type.php:35
+msgid "Items list navigation"
+msgstr ""
+
+#: inc/admin/custom-post-type.php:36
+msgid "Filter items list"
+msgstr ""
+
+#: inc/admin/custom-post-type.php:39
+msgid "TX Project"
+msgstr ""
+
+#: inc/admin/custom-post-type.php:40
+msgid "Post Type Description"
+msgstr ""
+
+#: inc/admin/enqueue.php:12 inc/common/admin-bar.php:83
+msgid "Check for update..."
+msgstr ""
+
+#: inc/admin/ui/meta-boxes.php:12
+msgid "Transifex API"
+msgstr ""
+
+#: inc/admin/ui/meta-boxes.php:14
+msgid "Project attributs"
+msgstr ""
+
+#: inc/admin/ui/notices.php:16
+msgid ""
+"In order to use WPT Transifex Updater, please <a href=\"profile.php#wptxu-"
+"transifex-account\">register your Transifex credentials</a>. "
+msgstr ""
+
+#: inc/admin/ui/options.php:15
+msgid "Transifex Account Informations"
+msgstr ""
+
+#: inc/admin/ui/options.php:22
+msgid "Transifex Username"
+msgstr ""
+
+#: inc/admin/ui/options.php:26
+msgid "Please enter your Transifex username."
+msgstr ""
+
+#: inc/admin/ui/options.php:31
+msgid "Transifex Password"
+msgstr ""
+
+#: inc/admin/ui/options.php:35
+msgid "Please enter your Transifex password."
+msgstr ""
+
+#: inc/admin/ui/options.php:42
+msgid "Connected as&nbsp;:&nbsp;"
+msgstr ""
+
+#: inc/admin/ui/options.php:44
+msgid "Logout"
+msgstr ""
+
+#: inc/classes/wptxu-translation.php:31
+msgid "Translation folder created."
+msgstr ""
+
+#: inc/classes/wptxu-translation.php:48
+msgid "Import po file on local filesystem."
+msgstr ""
+
+#: inc/classes/wptxu-translation.php:56
+msgid "Create mo file on local filesystem."
+msgstr ""
+
+#: inc/classes/wptxu-translation.php:67
+msgid "Create readme file on local filesystem."
+msgstr ""
+
+#: inc/classes/wptxu-translation.php:79
+msgid "Translation is up to date!"
+msgstr ""
+
+#: inc/classes/wptxu-translation.php:84
+msgid "Translation update available!"
+msgstr ""
+
+#: inc/classes/wptxu-translation.php:84
+msgid "Locale translation"
+msgstr ""
+
+#: inc/classes/wptxu-translation.php:84
+msgid "Transifex translation"
+msgstr ""
+
+#: inc/common/admin-bar.php:30
+msgid "Settings"
+msgstr ""
+
+#: inc/common/admin-bar.php:47 inc/functions/functions.php:17
+msgid "Update translation"
+msgstr ""
+
+#: inc/common/admin-bar.php:60
+msgid "Translation for&nbsp;:&nbsp;"
+msgstr ""
+
+#: inc/common/translation.php:18
+msgid "Cheatin&#8217; uh?"
+msgstr ""
+
+#: inc/functions/functions.php:23
+msgid "Please, first save your project."
+msgstr ""
+
+#: inc/functions/functions.php:39
+msgid "Project type&nbsp;:&nbsp;"
+msgstr ""
+
+#: inc/functions/functions.php:42
+msgid "Plugins"
+msgstr ""
+
+#: inc/functions/functions.php:45
+msgid "Themes"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "WP Transifex Updater"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+#. Author URI of the plugin/theme
+msgid "http://wp-translations.org/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Update translations from Transifex."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "WP-Translations"
+msgstr ""
