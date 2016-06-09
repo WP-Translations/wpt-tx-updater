@@ -40,6 +40,9 @@ define( 'WPTXU_CONTENT_PATH', WPTXU_PATH . '/languages' );
  */
 function wptxu_init() {
 
+	// Load translations
+    load_plugin_textdomain( 'wpt-tx-updater', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
+
 	if ( is_admin() ) {
 
 		require( WPTXU_ADMIN_PATH . 'enqueue.php' );
