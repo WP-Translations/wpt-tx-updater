@@ -13,7 +13,7 @@ function wptxu_empty_credentials() {
 
 	?>
     <div class="notice notice-warning">
-        <p><?php _e( 'In order to use WPT Transifex Updater, please <a href="profile.php#wptxu-transifex-account">register your credentials</a>. ', 'wpt-tx-updater' ); ?></p>
+        <p><?php _e( 'In order to use WPT Transifex Updater, please <a href="profile.php#wptxu-transifex-account">register your Transifex credentials</a>. ', 'wpt-tx-updater' ); ?></p>
     </div>
     <?php endif;
 }

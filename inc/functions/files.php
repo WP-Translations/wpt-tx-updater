@@ -9,9 +9,9 @@ defined( 'ABSPATH' ) or die( 'Cheatin&#8217; uh?' );
  * @return void
  */
 function wptxu_init_translations_dir() {
-    if ( ! is_dir( WPTXU_CONTENT_PATH ) ) {
+	if ( ! is_dir( WPTXU_CONTENT_PATH ) ) {
 		wptxu_mkdir_p( WPTXU_CONTENT_PATH );
-    }
+	}
 }
 
 /**
@@ -19,7 +19,7 @@ function wptxu_init_translations_dir() {
  *
  * @since 1.0.0
  *
- * @param string $dir The path of directory will be created
+ * @param string $dir The path of directory will be created.
  * @return bool
  */
 function wptxu_mkdir( $dir ) {
@@ -39,12 +39,12 @@ function wptxu_mkdir( $dir ) {
  * @source wp_mkdir_p() in /wp-includes/functions.php
  */
 function wptxu_mkdir_p( $target ) {
-	// from php.net/mkdir user contributed notes
+	// From php.net/mkdir user contributed notes.
 	$target = str_replace( '//', '/', $target );
 
 	// safe mode fails with a trailing slash under certain PHP versions.
-	$target = rtrim($target, '/'); // Use rtrim() instead of untrailingslashit to avoid formatting.php dependency.
-	if ( empty($target) ) {
+	$target = rtrim( $target, '/' ); // Use rtrim() instead of untrailingslashit to avoid formatting.php dependency.
+	if ( empty( $target ) ) {
 		$target = '/';
 	}
 
@@ -72,8 +72,8 @@ function wptxu_mkdir_p( $target ) {
  *
  * @since 1.0.0
  *
- * @param string $file 	  The path of file will be created
- * @param string $content The content that will be printed
+ * @param string $file 	  The path of file will be created.
+ * @param string $content The content that will be printed.
  * @return bool
  */
 function wptxu_put_content( $file, $content ) {
@@ -95,12 +95,11 @@ function wptxu_put_content( $file, $content ) {
  */
 function wptxu_scandir( $dir ) {
 	$target = WPTXU_CONTENT_PATH. '/' . $dir;
-	if ( is_dir( $target ) ) { 
+	if ( is_dir( $target ) ) {
 		$resources = scandir( $target );
 		return $resources;
 	} else {
-		return 'FUCKKKKKKKK !';
+		return 'FUCKKKKKKKK!';
 	}
-	
-	
+
 }
