@@ -3,7 +3,7 @@
 Plugin Name: WP Transifex Updater
 Plugin URI:  http://wp-translations.org/
 Description: Update translations from Transifex.
-Version:     1.0.2
+Version:     1.0.3
 Author:      WP-Translations
 Author URI:  http://wp-translations.org/
 License:     GPL2
@@ -31,7 +31,7 @@ define( 'WPTXU_URL_ASSETS_CSS', WPTXU_URL_ASSETS . 'css/' );
 define( 'WPTXU_URL_ASSETS_JS', WPTXU_URL_ASSETS . 'js/' );
 define( 'WPTXU_URL_ASSETS_IMG', WPTXU_URL_ASSETS . 'img/' );
 
-define( 'WPTXU_CONTENT_PATH', WPTXU_PATH . '/languages' );
+define( 'WPTXU_CONTENT_PATH', WPTXU_PATH . 'languages' );
 
 /**
  * Tell WP what to do when plugin is loaded
@@ -43,10 +43,12 @@ function wptxu_init() {
 	// Load translations
     load_plugin_textdomain( 'wpt-tx-updater', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
 
+	require( WPTXU_FUNCTIONS_PATH . 'functions.php' );
+    require( WPTXU_COMMON_PATH . 'admin-bar.php' );
+
 	if ( is_admin() ) {
 
 		require( WPTXU_ADMIN_PATH . 'enqueue.php' );
-		require( WPTXU_FUNCTIONS_PATH . 'functions.php' );
 		require( WPTXU_FUNCTIONS_PATH . 'files.php' );
 		require( WPTXU_FUNCTIONS_PATH . 'dates.php' );
 		require( WPTXU_ADMIN_PATH . 'options.php' );
@@ -68,14 +70,12 @@ function wptxu_init() {
 		}
 	}
 
-	require( WPTXU_COMMON_PATH . 'admin-bar.php' );
-
 }
 add_action( 'plugins_loaded', 'wptxu_init' );
 
 
 /**
- * Load textdomain
+ * Load plugin textdomain
  *
  * @since 1.0.0
  */
@@ -96,6 +96,27 @@ function wptxu_load_plugin_textdomain() {
 }
 add_action( 'plugins_loaded', 'wptxu_load_plugin_textdomain', 0 );
 
+/**
+ * Load themes textdomain
+ *
+ * @since 1.0.3
+ */
+function wptxu_load_themes_textdomain() {
+
+	if ( is_dir( WPTXU_CONTENT_PATH . '/themes' ) ) {
+
+		$domains = array_diff( scandir( WPTXU_CONTENT_PATH . '/themes' ), array( '.', '..' ) );
+
+		foreach ( $domains as $domain ) {
+			$locale = apply_filters( 'plugin_locale', get_locale(), $domain );
+
+			load_theme_textdomain( $domain, WPTXU_CONTENT_PATH . '/themes/' . $domain . '/' . $locale . '/' );
+
+		}
+	}
+
+}
+add_action( 'after_setup_theme', 'wptxu_load_themes_textdomain', 10 );
 
 /*
  * Tell WP what to do when plugin is activated
