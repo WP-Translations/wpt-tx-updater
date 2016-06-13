@@ -35,7 +35,7 @@ defined( 'ABSPATH' ) or die( 'Cheatin&#8217; uh?' );
 
  	$type = get_post_meta( $post->ID, 'wptxu_project_type', true ); ?>
 
-	<div id="wptxu-type-input">
+	<div id="wptxu-input-type">
 	<p><?php _e( 'Project type&nbsp;:&nbsp;', 'wpt-tx-updater'); ?></p>
  		<div>
 			<input id="wptxu-type-plugins" type="radio" name="wptxu-project-type" value="plugins" <?php checked( $type, "plugins" ); ?>>
@@ -46,6 +46,11 @@ defined( 'ABSPATH' ) or die( 'Cheatin&#8217; uh?' );
 		</div>
 	</div>
 
+	<div id="wptxu-input-filename">
+		<label for="wptxu-mo-filename"><?php _e('Custom .mo filename', 'wpt-tx-updater'); ?></label>
+		<input id="wptxu-mo-filename" type="text" name="wptxu-mo-filename" value="<?php echo get_post_meta( $post->ID, 'wptxu_mo_filename', true ); ?>">
+			<br>
+	</div>
  	<?php
  }
 
@@ -58,6 +63,9 @@ add_action( 'save_post_wptxu-project', 'wptxu_project_attributs_save', 10, 3 );
 function wptxu_project_attributs_save( $post_id, $post, $update ) {
 	if ( isset( $_REQUEST['wptxu-project-type'] ) ) {
         update_post_meta( $post_id, 'wptxu_project_type', sanitize_text_field( $_REQUEST['wptxu-project-type'] ) );
+    }
+    if ( isset( $_REQUEST['wptxu-mo-filename'] ) ) {
+    	update_post_meta( $post_id, 'wptxu_mo_filename', sanitize_text_field( $_REQUEST['wptxu-mo-filename'] ) );
     }
 }
 

@@ -9,20 +9,28 @@ class WPTXU_Translation
 	private $text_domain_path;
 	private $po_file_path;
 	private $mo_file_path;
+	private $filename;
 
-	public function __construct( $project, $project_type, $text_domain, $lang_code, $content ) {
+	public function __construct( $project_id, $tx_infos, $project_type, $text_domain, $lang_code, $content ) {
 
-		$this->project = $project;
+		$this->project_id = $project_id;
+		$this->project =  $tx_infos;
 		$this->project_type = $project_type;
 		$this->text_domain = $text_domain;
 		$this->lang_code = $lang_code;
 		$this->content = $content;
 
+		if( get_post_meta( $this->project_id, 'wptxu_mo_filename', true ) ) {
+			$this->filename = get_post_meta( $this->project_id, 'wptxu_mo_filename', true );
+		} else {
+			$this->filename = $text_domain;
+		}
+
 		if( $this->project_type == 'plugins') {
 
 			$this->text_domain_path = WPTXU_CONTENT_PATH . '/' . $this->project_type . '/' . $this->text_domain . '/' . $this->lang_code . '/';
-			$this->po_file_path = $this->text_domain_path . $this->text_domain . '-' . $this->lang_code . '.po';
-			$this->mo_file_path = $this->text_domain_path . $this->text_domain . '-' . $this->lang_code . '.mo';
+			$this->po_file_path = $this->text_domain_path . $this->filename . '-' . $this->lang_code . '.po';
+			$this->mo_file_path = $this->text_domain_path . $this->filename . '-' . $this->lang_code . '.mo';
 
 		} else {
 

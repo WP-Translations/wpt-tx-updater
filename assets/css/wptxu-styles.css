@@ -41,3 +41,7 @@
     font: normal 20px/1 dashicons;
     color: rgba(240,245,250,0.6);
 }
+
+div[id*=wptxu-input-] {
+	margin-bottom: .5em;
+}

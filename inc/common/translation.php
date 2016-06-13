@@ -32,7 +32,7 @@ function wptxu_update_translation() {
 
 		$translation_content = $project_tx->get_translation( $resource->slug, $lang_code );
 
-		$translation_to_po = new WPTXU_Translation( $project_tx_infos_lang, $type, $resource->slug, $lang_code, $translation_content->content );
+		$translation_to_po = new WPTXU_Translation( $project->ID, $project_tx_infos_lang, $type, $resource->slug, $lang_code, $translation_content->content );
 		
 		$translation_to_po = $translation_to_po->make_translation();
 
