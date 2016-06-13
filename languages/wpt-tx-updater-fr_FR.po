@@ -1,0 +1,334 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WP Transifex Updater\n"
+"POT-Creation-Date: 2016-06-09 10:19+0200\n"
+"PO-Revision-Date: 2016-06-09 16:53+0200\n"
+"Last-Translator: FX Bénard <fx@fxbenard.com>\n"
+"Language-Team: FX Bénard <fx@fxbenard.com>\n"
+"Language: fr_FR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Poedit 1.8.8\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-WPHeader: wpt-tx-updater.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Poedit-SearchPathExcluded-1: inc/libs/gettext\n"
+
+#: inc/admin/custom-post-type.php:12
+msgctxt "Post Type General Name"
+msgid "Projects"
+msgstr "Projects"
+
+#: inc/admin/custom-post-type.php:13
+msgctxt "Post Type Singular Name"
+msgid "Project"
+msgstr "Projet"
+
+#: inc/admin/custom-post-type.php:14
+msgid "TX Projects"
+msgstr "Projects TX"
+
+#: inc/admin/custom-post-type.php:15
+msgid "Post Type"
+msgstr "Type de contenu"
+
+#: inc/admin/custom-post-type.php:16
+msgid "Item Archives"
+msgstr "Archives de l’élément"
+
+#: inc/admin/custom-post-type.php:17
+msgid "Parent Item:"
+msgstr "Élément parent :"
+
+#: inc/admin/custom-post-type.php:18
+msgid "All Items"
+msgstr "Tous les éléments"
+
+#: inc/admin/custom-post-type.php:19
+msgid "Add New Item"
+msgstr "Ajouter un nouvel élément"
+
+#: inc/admin/custom-post-type.php:20
+msgid "Add New"
+msgstr "Ajouter"
+
+#: inc/admin/custom-post-type.php:21
+msgid "New Item"
+msgstr "Nouvel élément"
+
+#: inc/admin/custom-post-type.php:22
+msgid "Edit Item"
+msgstr "Modifier un élément"
+
+#: inc/admin/custom-post-type.php:23
+msgid "Update Item"
+msgstr "Mettre à jour l’élément"
+
+#: inc/admin/custom-post-type.php:24
+msgid "View Item"
+msgstr "Afficher l’élément"
+
+#: inc/admin/custom-post-type.php:25
+msgid "Search Item"
+msgstr "Chercher un élément"
+
+#: inc/admin/custom-post-type.php:26
+msgid "Not found"
+msgstr "Non trouvé"
+
+#: inc/admin/custom-post-type.php:27
+msgid "Not found in Trash"
+msgstr "Rien dans la corbeille"
+
+#: inc/admin/custom-post-type.php:28
+msgid "Featured Image"
+msgstr "Image mise en avant "
+
+#: inc/admin/custom-post-type.php:29
+msgid "Set featured image"
+msgstr "Définir comme image mise en avant"
+
+#: inc/admin/custom-post-type.php:30
+msgid "Remove featured image"
+msgstr "Supprimer l&rsquo;image mise en avant"
+
+#: inc/admin/custom-post-type.php:31
+msgid "Use as featured image"
+msgstr "Utiliser comme image mise en avant"
+
+#: inc/admin/custom-post-type.php:32
+msgid "Insert into item"
+msgstr "Insérer dans l’élément"
+
+#: inc/admin/custom-post-type.php:33
+msgid "Uploaded to this item"
+msgstr "Mis en ligne pour cet élément"
+
+#: inc/admin/custom-post-type.php:34
+msgid "Items list"
+msgstr "Liste des éléments"
+
+#: inc/admin/custom-post-type.php:35
+msgid "Items list navigation"
+msgstr "Navigation de la liste des éléments"
+
+#: inc/admin/custom-post-type.php:36
+msgid "Filter items list"
+msgstr "Filtrer la liste des éléments"
+
+#: inc/admin/custom-post-type.php:39
+msgid "TX Project"
+msgstr "Project TX"
+
+#: inc/admin/custom-post-type.php:40
+msgid "Post Type Description"
+msgstr "Description du type de contenu"
+
+#: inc/admin/enqueue.php:12 inc/common/admin-bar.php:83
+msgid "Check for update..."
+msgstr "Rechercher des mises à jour&hellip;"
+
+#: inc/admin/ui/meta-boxes.php:12
+msgid "Transifex API"
+msgstr "Transifex API"
+
+#: inc/admin/ui/meta-boxes.php:14
+msgid "Project attributs"
+msgstr "Attributs du projet"
+
+#: inc/admin/ui/notices.php:16
+msgid ""
+"In order to use WPT Transifex Updater, please <a href=\"profile.php#wptxu-"
+"transifex-account\">register your Transifex credentials</a>. "
+msgstr ""
+"Pour pouvoir utiliser WPT Transifex Updater, veuillez <a href=\"profile."
+"php#wptxu-transifex-account\">enregistrer vos identifiants de Transifex</a>. "
+
+#: inc/admin/ui/options.php:15
+msgid "Transifex Account Informations"
+msgstr "Informations du compte Transifex"
+
+#: inc/admin/ui/options.php:22
+msgid "Transifex Username"
+msgstr "Transifex Nom d’utilisateur"
+
+#: inc/admin/ui/options.php:26
+msgid "Please enter your Transifex username."
+msgstr "Veuillez saisir votre nom d’utilisateur de Transifex."
+
+#: inc/admin/ui/options.php:31
+msgid "Transifex Password"
+msgstr "Transifex Mot de passe"
+
+#: inc/admin/ui/options.php:35
+msgid "Please enter your Transifex password."
+msgstr "Veuillez saisir votre mot de passe de Transifex."
+
+#: inc/admin/ui/options.php:42
+msgid "Connected as&nbsp;:&nbsp;"
+msgstr "Connecté en tant que : "
+
+#: inc/admin/ui/options.php:44
+msgid "Logout"
+msgstr "Déconnexion"
+
+#: inc/classes/wptxu-translation.php:31
+msgid "Translation folder created."
+msgstr "Le dossier de traduction a été créé."
+
+#: inc/classes/wptxu-translation.php:48
+msgid "Import po file on local filesystem."
+msgstr "Importation du fichier .po sur le système."
+
+#: inc/classes/wptxu-translation.php:56
+msgid "Create mo file on local filesystem."
+msgstr "Création du fichier . mo sur le système."
+
+#: inc/classes/wptxu-translation.php:67
+msgid "Create readme file on local filesystem."
+msgstr "Création du fichier readme sur le système."
+
+#: inc/classes/wptxu-translation.php:79
+msgid "Translation is up to date!"
+msgstr "La traduction est à jour !"
+
+#: inc/classes/wptxu-translation.php:84
+msgid "Translation update available!"
+msgstr "Mise à jour de traduction disponible !"
+
+#: inc/classes/wptxu-translation.php:84
+msgid "Locale translation"
+msgstr "Traduction locale"
+
+#: inc/classes/wptxu-translation.php:84
+msgid "Transifex translation"
+msgstr "traduction Transifex"
+
+#: inc/common/admin-bar.php:30
+msgid "Settings"
+msgstr "Réglages"
+
+#: inc/common/admin-bar.php:47 inc/functions/functions.php:17
+msgid "Update translation"
+msgstr "Mettre à jour la traduction"
+
+#: inc/common/admin-bar.php:60
+msgid "Translation for&nbsp;:&nbsp;"
+msgstr "Traduction pour : "
+
+#: inc/common/translation.php:18
+msgid "Cheatin&#8217; uh?"
+msgstr "Une mauvaise manipulation ?"
+
+#: inc/functions/functions.php:23
+msgid "Please, first save your project."
+msgstr "Veuillez d'abord enregistrer votre projet."
+
+#: inc/functions/functions.php:39
+msgid "Project type&nbsp;:&nbsp;"
+msgstr "Type de projet : "
+
+#: inc/functions/functions.php:42
+msgid "Plugins"
+msgstr "Extensions"
+
+#: inc/functions/functions.php:45
+msgid "Themes"
+msgstr "Thèmes"
+
+#. Plugin Name of the plugin/theme
+msgid "WP Transifex Updater"
+msgstr "WP Transifex Updater"
+
+#. Plugin URI of the plugin/theme
+#. Author URI of the plugin/theme
+msgid "http://wp-translations.org/"
+msgstr "http://wp-translations.org/"
+
+#. Description of the plugin/theme
+msgid "Update translations from Transifex."
+msgstr "Mettre à jour des traductions depuis Transifex."
+
+#. Author of the plugin/theme
+msgid "WP-Translations"
+msgstr "WP-Translations"
+
+#~ msgid "Integer"
+#~ msgstr "Entier"
+
+#, fuzzy
+#~ msgid "This field cannot be blank."
+#~ msgstr "Le champ du nom ne peut être vide."
+
+#, fuzzy
+#~ msgid "Value %sr is not a valid choice."
+#~ msgstr "Veuillez saisir une valeur de couleur correcte."
+
+#, fuzzy
+#~ msgid "hello"
+#~ msgstr "Bonjour"
+
+#, fuzzy
+#~ msgid "text 2"
+#~ msgstr "Ligne de texte 2"
+
+#, fuzzy
+#~ msgid "text 3 (with parenthesis)"
+#~ msgstr "3"
+
+#, fuzzy
+#~ msgid "text 6"
+#~ msgstr "Titre 6"
+
+#, fuzzy
+#~ msgid "text 7 (with parenthesis)"
+#~ msgstr "7 derniers jours"
+
+#, fuzzy
+#~ msgid "text 9 'with single quotes'"
+#~ msgstr "Texte ligne simple"
+
+#~ msgid "No comments"
+#~ msgstr "Aucun commentaire"
+
+#, fuzzy
+#~ msgid "All comments"
+#~ msgstr "Tous les commentaires"
+
+#, fuzzy
+#~ msgid "i18n Tagged comment"
+#~ msgstr "Mots-clefs :"
+
+#, fuzzy
+#~ msgid "plain"
+#~ msgstr "Simple"
+
+#, fuzzy
+#~ msgid "DATE \\a\\t TIME"
+#~ msgstr "Jour et heure"
+
+#, fuzzy
+#~ msgid "FIELD\tFIELD"
+#~ msgstr ""
+#~ "Sélectionnez la visibilité pour ce champ. Si la valeur de visibilité est "
+#~ "fixée à Tous, l’utilisateur qui soumet le formulaire pourra voir le "
+#~ "champ. Si la visibilité est fixée à Administrateur Seulement, le champ ne "
+#~ "sera visible que dans la section d’administration de Gravity Forms.<br /"
+#~ "><br />Il est utile de configurer la visibilité d’un champ à "
+#~ "Administrateur Seulement lorsque vous voulez fixer un statut ou niveau de "
+#~ "priorité aux entrées soumises."
+
+#, fuzzy
+#~ msgid "text concatenated with 'comments'"
+#~ msgstr "Texte pour les nouveaux commentaires :"
+
+#, fuzzy
+#~ msgid "Stop at the variable"
+#~ msgstr "Arrêter"
