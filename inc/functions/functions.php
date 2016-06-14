@@ -36,7 +36,7 @@ defined( 'ABSPATH' ) or die( 'Cheatin&#8217; uh?' );
  	$type = get_post_meta( $post->ID, 'wptxu_project_type', true ); ?>
 
 	<div id="wptxu-input-type">
-	<p><?php _e( 'Project type&nbsp;:&nbsp;', 'wpt-tx-updater'); ?></p>
+	<p><?php _e( 'Project type:&nbsp;', 'wpt-tx-updater'); ?></p>
  		<div>
 			<input id="wptxu-type-plugins" type="radio" name="wptxu-project-type" value="plugins" <?php checked( $type, "plugins" ); ?>>
 			<label for="wptxu-type-plugins"><?php _e('Plugins', 'wpt-tx-updater'); ?></label><br>

@@ -39,7 +39,7 @@ function wptxu_extra_profile_fields( $user ) {
         <?php else : ?>
 
         <tr>
-            <th><?php _e( 'Connected as&nbsp;:&nbsp;', 'wpt-tx-updater' );?></th>
+            <th><?php _e( 'Connected as:&nbsp;', 'wpt-tx-updater' );?></th>
             <td><?php echo get_the_author_meta( 'wptxu_transifex_user', $user->ID ); ?></td>
             <td> <button type="submit" value="wptxu-tx-loggout" name="wptxu-tx-loggout" class="button button-secondary"><?php _e( 'Logout', 'wpt-tx-updater' ); ?></button></td>
         </tr>

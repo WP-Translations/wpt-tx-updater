@@ -73,7 +73,7 @@ function wptxu_admin_bar( $wp_admin_bar ) {
 			$wp_admin_bar->add_node(array(
 				'parent'	=> 'project-' . $project->ID,
 				'id' 		=> 'project-actions-' . $project->ID ,
-				'title' 	=> '<span class="flag-icon flag-icon-' . $icon . '"></span>&nbsp;'.__( 'Translation for&nbsp;:&nbsp;', 'wpt-tx-updater' ) . $lang_code,
+				'title' 	=> '<span class="flag-icon flag-icon-' . $icon . '"></span>&nbsp;'.__( 'Translation for:&nbsp;', 'wpt-tx-updater' ) . $lang_code,
 				'meta' 		=> array(
 					'target'   => '_self',
 		            'html'     => $subnode_content, 
