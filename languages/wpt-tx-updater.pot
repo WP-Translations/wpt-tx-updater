@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: WP Transifex Updater\n"
-"POT-Creation-Date: 2016-06-14 12:27+0200\n"
+"POT-Creation-Date: 2016-06-14 13:11+0200\n"
 "PO-Revision-Date: 2016-06-09 09:53+0200\n"
 "Last-Translator: FX Bénard <fx@fxbenard.com>\n"
 "Language-Team: FX Bénard <fx@fxbenard.com>\n"
@@ -47,7 +47,7 @@ msgstr ""
 msgid "Parent Project:"
 msgstr ""
 
-#: inc/admin/custom-post-type.php:18
+#: inc/admin/custom-post-type.php:18 inc/common/admin-bar.php:38
 msgid "All Projects"
 msgstr ""
 
@@ -59,7 +59,7 @@ msgstr ""
 msgid "Add New"
 msgstr ""
 
-#: inc/admin/custom-post-type.php:21
+#: inc/admin/custom-post-type.php:21 inc/common/admin-bar.php:46
 msgid "New Project"
 msgstr ""
 
@@ -131,12 +131,12 @@ msgstr ""
 msgid "Post Type Description"
 msgstr ""
 
-#: inc/admin/enqueue.php:12 inc/common/admin-bar.php:83
+#: inc/admin/enqueue.php:12 inc/common/admin-bar.php:99
 msgid "Check for update..."
 msgstr ""
 
 #: inc/admin/ui/meta-boxes.php:12
-msgid "Transifex API"
+msgid "transifex API"
 msgstr ""
 
 #: inc/admin/ui/meta-boxes.php:14
@@ -145,45 +145,45 @@ msgstr ""
 
 #: inc/admin/ui/notices.php:16
 msgid ""
-"In order to use WPT Transifex Updater, please <a href=\"profile.php#wptxu-"
-"transifex-account\">register your Transifex credentials</a>. "
+"In order to use WPT transifex updater, please <a href=\"profile.php#wptxu-"
+"transifex-account\">register your transifex credentials</a>. "
 msgstr ""
 
 #: inc/admin/ui/notices.php:31
 msgid ""
 "Unauthorized:&nbsp;authentication is required to access the resource, "
 "please <a href=\"profile.php#wptxu-transifex-account\">register your "
-"Transifex credentials</a>."
+"transifex credentials</a>."
 msgstr ""
 
 #: inc/admin/ui/notices.php:35
 msgid ""
-"Project not found, check Transifex and local project must have the same "
+"Project not found, check transifex and local project must have the same "
 "slug."
 msgstr ""
 
 #: inc/admin/ui/options.php:15
-msgid "Transifex Account Informations"
+msgid "transifex Account Informations"
 msgstr ""
 
 #: inc/admin/ui/options.php:22
-msgid "Transifex Username"
+msgid "transifex Username"
 msgstr ""
 
 #: inc/admin/ui/options.php:26
-msgid "Please enter your Transifex username."
+msgid "Please enter your transifex username."
 msgstr ""
 
 #: inc/admin/ui/options.php:31
-msgid "Transifex Password"
+msgid "transifex Password"
 msgstr ""
 
 #: inc/admin/ui/options.php:35
-msgid "Please enter your Transifex password."
+msgid "Please enter your transifex password."
 msgstr ""
 
 #: inc/admin/ui/options.php:42
-msgid "Connected as&nbsp;:&nbsp;"
+msgid "Connected as:&nbsp;"
 msgstr ""
 
 #: inc/admin/ui/options.php:44
@@ -219,19 +219,19 @@ msgid "Locale translation"
 msgstr ""
 
 #: inc/classes/wptxu-translation.php:99
-msgid "Transifex translation"
+msgid "transifex translation"
 msgstr ""
 
 #: inc/common/admin-bar.php:30
 msgid "Settings"
 msgstr ""
 
-#: inc/common/admin-bar.php:47 inc/functions/functions.php:17
+#: inc/common/admin-bar.php:63 inc/functions/functions.php:17
 msgid "Update translation"
 msgstr ""
 
-#: inc/common/admin-bar.php:60
-msgid "Translation for&nbsp;:&nbsp;"
+#: inc/common/admin-bar.php:76
+msgid "Translation for:&nbsp;"
 msgstr ""
 
 #: inc/common/translation.php:18
@@ -243,7 +243,7 @@ msgid "Please, first save your project."
 msgstr ""
 
 #: inc/functions/functions.php:39
-msgid "Project type&nbsp;:&nbsp;"
+msgid "Project type:&nbsp;"
 msgstr ""
 
 #: inc/functions/functions.php:42
