@@ -2,7 +2,7 @@
 defined( 'ABSPATH' ) or die( 'Cheatin&#8217; uh?' );
 
 /**
- * Add WPT Transifex Updater menu in the admin bar
+ * Add WPT transifex updater menu in the admin bar
  *
  * @since 1.0.1
  */
@@ -29,6 +29,22 @@ function wptxu_admin_bar( $wp_admin_bar ) {
 		'id' 		=> 'Settings',
 		'title' 	=> __( 'Settings', 'wpt-tx-updater' ),
 		'href' 		=> admin_url() . 'profile.php#wptxu-transifex-account',
+	));
+
+	// All projects
+	$wp_admin_bar->add_node(array(
+		'parent'	=> 'wptxu_setting_group',
+		'id' 		=> 'All-projects',
+		'title' 	=> __('All Projects', 'wpt-tx-updater'),
+		'href' 		=> admin_url() . 'edit.php?post_type=wptxu-project',
+	));
+
+	// Add project
+	$wp_admin_bar->add_node(array(
+		'parent'	=> 'wptxu_setting_group',
+		'id' 		=> 'New-project',
+		'title' 	=> __('New Project', 'wpt-tx-updater'),
+		'href' 		=> admin_url() . 'post-new.php?post_type=wptxu-project',
 	));
 
 	$user_id = get_current_user_id();
