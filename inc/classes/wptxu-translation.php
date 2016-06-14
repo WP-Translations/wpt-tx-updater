@@ -60,7 +60,7 @@ class WPTXU_Translation
 	private function _save_po_file() {
 
 		$po_file = wptxu_put_content( $this->po_file_path,  $this->content );
-		echo '<li class="wptxu-success">'. __( 'Import po file on local filesystem.', 'wpt-tx-updater' ) .'</li>';
+		echo '<li class="wptxu-notice wptxu-success">'. __( 'Import po file on local filesystem.', 'wpt-tx-updater' ) .'</li>';
 
 	}
 
@@ -68,7 +68,7 @@ class WPTXU_Translation
 
 		$file = Translations::fromPoFile( $this->po_file_path );
 	    $file->toMoFile( $this->mo_file_path );
-	    echo '<li class="wptxu-success">'. __( 'Create mo file on local filesystem.', 'wpt-tx-updater' ) .'</li>';
+	    echo '<li class="wptxu-notice wptxu-success">'. __( 'Create mo file on local filesystem.', 'wpt-tx-updater' ) .'</li>';
 	}
 
 	private function _create_readme_file() {
@@ -79,7 +79,7 @@ class WPTXU_Translation
 		$txt .= 'Last commiter : '. $this->project->last_commiter . "\r\n";
 
 		$readme_content = wptxu_put_content( $this->text_domain_path . 'readme.txt', $txt );
-		echo '<li class="wptxu-success">'. __( 'Create readme file on local filesystem.', 'wpt-tx-updater' ) .'</li>';
+		echo '<li class="wptxu-notice wptxu-success">'. __( 'Create readme file on local filesystem.', 'wpt-tx-updater' ) .'</li>';
 	}
 
 	private function _is_up_to_date() {
@@ -91,12 +91,12 @@ class WPTXU_Translation
 
 			if ( strtotime( $this->project->last_update ) == strtotime( $readme['last_update'] ) ) {
 
-				echo '<li>' . __( 'Translation is up to date!', 'wpt-tx-updater' ) . '</li>';
+				echo '<li class="wptxu-notice wptxu-success">' . __( 'Translation is up to date!', 'wpt-tx-updater' ) . '</li>';
 				return true;
 
 			} else {
 
-				echo '<li class="wpts-warning">' . __( 'Translation update available!', 'wpt-tx-updater' ) . ' - ' . __( 'Locale translation', 'wpt-tx-updater' ) .' : ' . $readme['last_update'] .  ' - ' . __( 'Transifex translation', 'wpt-tx-updater' ) .' : ' . $this->project->last_update .  ' </li>';
+				echo '<li class="wptxu-notice wptxu-warning">' . __( 'Translation update available!', 'wpt-tx-updater' ) . ' - ' . __( 'Locale translation', 'wpt-tx-updater' ) .' : ' . $readme['last_update'] .  ' - ' . __( 'Transifex translation', 'wpt-tx-updater' ) .' : ' . $this->project->last_update .  ' </li>';
 				return false;
 
 			}
