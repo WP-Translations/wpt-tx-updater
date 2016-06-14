@@ -3,7 +3,7 @@
 Plugin Name: WP Transifex Updater
 Plugin URI:  http://wp-translations.org/
 Description: Update translations from Transifex.
-Version:     1.0.3
+Version:     1.0.4
 Author:      WP-Translations
 Author URI:  http://wp-translations.org/
 License:     GPL2
