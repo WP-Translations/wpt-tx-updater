@@ -13,7 +13,7 @@ function wptxu_empty_credentials() {
 
 	?>
     <div class="notice notice-warning">
-        <p><?php _e( 'In order to use WPT Transifex Updater, please <a href="profile.php#wptxu-transifex-account">register your Transifex credentials</a>. ', 'wpt-tx-updater' ); ?></p>
+        <p><?php _e( 'In order to use WPT transifex updater, please <a href="profile.php#wptxu-transifex-account">register your transifex credentials</a>. ', 'wpt-tx-updater' ); ?></p>
     </div>
     <?php endif;
 }
@@ -28,11 +28,11 @@ function wptxu_http_notices( $http_code ) {
 	switch ( $http_code ) {
 
 		case '401':
-			$message = __( 'Unauthorized:&nbsp;authentication is required to access the resource, please <a href="profile.php#wptxu-transifex-account">register your Transifex credentials</a>.', 'wpt-tx-updater' );
+			$message = __( 'Unauthorized:&nbsp;authentication is required to access the resource, please <a href="profile.php#wptxu-transifex-account">register your transifex credentials</a>.', 'wpt-tx-updater' );
 			break;
 
 		case '404':
-			$message = __( 'Project not found, check Transifex and local project must have the same slug.', 'wpt-tx-updater' );
+			$message = __( 'Project not found, check transifex and local project must have the same slug.', 'wpt-tx-updater' );
 			break;
 		
 	}
