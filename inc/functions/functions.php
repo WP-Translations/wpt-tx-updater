@@ -14,7 +14,7 @@ defined( 'ABSPATH' ) or die( 'Cheatin&#8217; uh?' );
  	
 	 	$project = $post->post_name; ?>
 	 	<div id="wptxu-up-tx-<?php echo $post->ID; ?>" class="wptxu-project-infos" data-project="<?php echo $post->ID; ?>">
-			<p><button type="button" class="button button-primary wptxu-update-tx" data-project="<?php echo $post->ID; ?>"><?php _e( 'Update translation', 'wpt-tx-updater' ); ?></button></p>
+			<p><button type="button" class="button button-primary wptxu-update-tx" data-project="<?php echo $post->ID; ?>"><?php _e( 'Update translation', 'wpt-tx-updater' ); ?></button><span id="wptxu-spinner-post" class="spinner"></span></p>
 			<ul id="wptxu-post-response-<?php echo $post->ID; ?>" class="wptxu-response-list"></ul>
 		</div>
 
