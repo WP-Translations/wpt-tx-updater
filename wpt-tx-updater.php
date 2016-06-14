@@ -31,7 +31,7 @@ define( 'WPTXU_URL_ASSETS_CSS', WPTXU_URL_ASSETS . 'css/' );
 define( 'WPTXU_URL_ASSETS_JS', WPTXU_URL_ASSETS . 'js/' );
 define( 'WPTXU_URL_ASSETS_IMG', WPTXU_URL_ASSETS . 'img/' );
 
-define( 'WPTXU_CONTENT_PATH', WPTXU_PATH . 'languages' );
+define( 'WPTXU_CONTENT_PATH', WP_CONTENT_DIR . '/wpt-tx-updater' );
 
 /**
  * Tell WP what to do when plugin is loaded
@@ -88,7 +88,7 @@ function wptxu_load_plugin_textdomain() {
 		foreach ( $domains as $domain ) {
 			$locale = apply_filters( 'plugin_locale', get_locale(), $domain );
 
-			load_plugin_textdomain( $domain, false, plugin_basename( dirname( __FILE__ ) ) . '/languages/plugins/' . $domain . '/' . $locale . '/' );
+			load_textdomain( $domain,  WPTXU_CONTENT_PATH . '/plugins/' . $domain . '/' . $locale . '/' . $domain . '-' . $locale . '.mo' );
 
 		}
 	}
