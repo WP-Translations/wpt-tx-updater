@@ -96,7 +96,7 @@ class WPTXU_Translation
 
 			} else {
 
-				echo '<li class="wptxu-notice wptxu-warning">' . __( 'Translation update available!', 'wpt-tx-updater' ) . ' - ' . __( 'Locale translation', 'wpt-tx-updater' ) .' : ' . $readme['last_update'] .  ' - ' . __( 'Transifex translation', 'wpt-tx-updater' ) .' : ' . $this->project->last_update .  ' </li>';
+				echo '<li class="wptxu-notice wptxu-warning">' . __( 'Translation update available!', 'wpt-tx-updater' ) . ' - ' . __( 'Locale translation', 'wpt-tx-updater' ) .' : ' . $readme['last_update'] .  ' - ' . __( 'transifex translation', 'wpt-tx-updater' ) .' : ' . $this->project->last_update .  ' </li>';
 				return false;
 
 			}
