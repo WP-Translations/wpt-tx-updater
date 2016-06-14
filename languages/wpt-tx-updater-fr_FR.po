@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WP Transifex Updater\n"
 "POT-Creation-Date: 2016-06-14 13:11+0200\n"
-"PO-Revision-Date: 2016-06-14 13:25+0200\n"
+"PO-Revision-Date: 2016-06-14 14:19+0200\n"
 "Last-Translator: FX Bénard <fx@fxbenard.com>\n"
 "Language-Team: FX Bénard <fx@fxbenard.com>\n"
 "Language: fr_FR\n"
@@ -48,12 +48,10 @@ msgid "Parent Project:"
 msgstr "Projet parent :"
 
 #: inc/admin/custom-post-type.php:18 inc/common/admin-bar.php:38
-#, fuzzy
 msgid "All Projects"
 msgstr "Tous les projets"
 
 #: inc/admin/custom-post-type.php:19
-#, fuzzy
 msgid "Add New Project"
 msgstr "Ajouter un nouveau projet"
 
@@ -191,7 +189,6 @@ msgid "Please enter your transifex password."
 msgstr "Veuillez saisir votre mot de passe de transifex."
 
 #: inc/admin/ui/options.php:42
-#, fuzzy
 msgid "Connected as:&nbsp;"
 msgstr "Connecté en tant que : "
 
