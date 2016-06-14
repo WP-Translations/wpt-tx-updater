@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: WP Transifex Updater\n"
-"POT-Creation-Date: 2016-06-09 10:19+0200\n"
+"POT-Creation-Date: 2016-06-14 12:27+0200\n"
 "PO-Revision-Date: 2016-06-09 09:53+0200\n"
 "Last-Translator: FX Bénard <fx@fxbenard.com>\n"
 "Language-Team: FX Bénard <fx@fxbenard.com>\n"
@@ -40,19 +40,19 @@ msgid "Post Type"
 msgstr ""
 
 #: inc/admin/custom-post-type.php:16
-msgid "Item Archives"
+msgid "Project Archives"
 msgstr ""
 
 #: inc/admin/custom-post-type.php:17
-msgid "Parent Item:"
+msgid "Parent Project:"
 msgstr ""
 
 #: inc/admin/custom-post-type.php:18
-msgid "All Items"
+msgid "All Projects"
 msgstr ""
 
 #: inc/admin/custom-post-type.php:19
-msgid "Add New Item"
+msgid "Add New Project"
 msgstr ""
 
 #: inc/admin/custom-post-type.php:20
@@ -60,23 +60,23 @@ msgid "Add New"
 msgstr ""
 
 #: inc/admin/custom-post-type.php:21
-msgid "New Item"
+msgid "New Project"
 msgstr ""
 
 #: inc/admin/custom-post-type.php:22
-msgid "Edit Item"
+msgid "Edit Project"
 msgstr ""
 
 #: inc/admin/custom-post-type.php:23
-msgid "Update Item"
+msgid "Update Project"
 msgstr ""
 
 #: inc/admin/custom-post-type.php:24
-msgid "View Item"
+msgid "View Project"
 msgstr ""
 
 #: inc/admin/custom-post-type.php:25
-msgid "Search Item"
+msgid "Search Project"
 msgstr ""
 
 #: inc/admin/custom-post-type.php:26
@@ -104,23 +104,23 @@ msgid "Use as featured image"
 msgstr ""
 
 #: inc/admin/custom-post-type.php:32
-msgid "Insert into item"
+msgid "Insert into project"
 msgstr ""
 
 #: inc/admin/custom-post-type.php:33
-msgid "Uploaded to this item"
+msgid "Uploaded to this project"
 msgstr ""
 
 #: inc/admin/custom-post-type.php:34
-msgid "Items list"
+msgid "Projects list"
 msgstr ""
 
 #: inc/admin/custom-post-type.php:35
-msgid "Items list navigation"
+msgid "Projects list navigation"
 msgstr ""
 
 #: inc/admin/custom-post-type.php:36
-msgid "Filter items list"
+msgid "Filter projects list"
 msgstr ""
 
 #: inc/admin/custom-post-type.php:39
@@ -147,6 +147,19 @@ msgstr ""
 msgid ""
 "In order to use WPT Transifex Updater, please <a href=\"profile.php#wptxu-"
 "transifex-account\">register your Transifex credentials</a>. "
+msgstr ""
+
+#: inc/admin/ui/notices.php:31
+msgid ""
+"Unauthorized:&nbsp;authentication is required to access the resource, "
+"please <a href=\"profile.php#wptxu-transifex-account\">register your "
+"Transifex credentials</a>."
+msgstr ""
+
+#: inc/admin/ui/notices.php:35
+msgid ""
+"Project not found, check Transifex and local project must have the same "
+"slug."
 msgstr ""
 
 #: inc/admin/ui/options.php:15
@@ -177,35 +190,35 @@ msgstr ""
 msgid "Logout"
 msgstr ""
 
-#: inc/classes/wptxu-translation.php:31
+#: inc/classes/wptxu-translation.php:50
 msgid "Translation folder created."
 msgstr ""
 
-#: inc/classes/wptxu-translation.php:48
+#: inc/classes/wptxu-translation.php:63
 msgid "Import po file on local filesystem."
 msgstr ""
 
-#: inc/classes/wptxu-translation.php:56
+#: inc/classes/wptxu-translation.php:71
 msgid "Create mo file on local filesystem."
 msgstr ""
 
-#: inc/classes/wptxu-translation.php:67
+#: inc/classes/wptxu-translation.php:82
 msgid "Create readme file on local filesystem."
 msgstr ""
 
-#: inc/classes/wptxu-translation.php:79
+#: inc/classes/wptxu-translation.php:94
 msgid "Translation is up to date!"
 msgstr ""
 
-#: inc/classes/wptxu-translation.php:84
+#: inc/classes/wptxu-translation.php:99
 msgid "Translation update available!"
 msgstr ""
 
-#: inc/classes/wptxu-translation.php:84
+#: inc/classes/wptxu-translation.php:99
 msgid "Locale translation"
 msgstr ""
 
-#: inc/classes/wptxu-translation.php:84
+#: inc/classes/wptxu-translation.php:99
 msgid "Transifex translation"
 msgstr ""
 
@@ -239,6 +252,10 @@ msgstr ""
 
 #: inc/functions/functions.php:45
 msgid "Themes"
+msgstr ""
+
+#: inc/functions/functions.php:50
+msgid "Custom .mo filename"
 msgstr ""
 
 #. Plugin Name of the plugin/theme

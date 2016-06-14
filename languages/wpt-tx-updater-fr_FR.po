@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: WP Transifex Updater\n"
-"POT-Creation-Date: 2016-06-09 10:19+0200\n"
-"PO-Revision-Date: 2016-06-09 16:53+0200\n"
+"POT-Creation-Date: 2016-06-14 12:27+0200\n"
+"PO-Revision-Date: 2016-06-14 12:40+0200\n"
 "Last-Translator: FX Bénard <fx@fxbenard.com>\n"
 "Language-Team: FX Bénard <fx@fxbenard.com>\n"
 "Language: fr_FR\n"
@@ -40,44 +40,46 @@ msgid "Post Type"
 msgstr "Type de contenu"
 
 #: inc/admin/custom-post-type.php:16
-msgid "Item Archives"
-msgstr "Archives de l’élément"
+msgid "Project Archives"
+msgstr "Archives du projet"
 
 #: inc/admin/custom-post-type.php:17
-msgid "Parent Item:"
-msgstr "Élément parent :"
+msgid "Parent Project:"
+msgstr "Projet parent :"
 
 #: inc/admin/custom-post-type.php:18
-msgid "All Items"
-msgstr "Tous les éléments"
+#, fuzzy
+msgid "All Projects"
+msgstr "Tous les projets"
 
 #: inc/admin/custom-post-type.php:19
-msgid "Add New Item"
-msgstr "Ajouter un nouvel élément"
+#, fuzzy
+msgid "Add New Project"
+msgstr "Ajouter un nouveau projet"
 
 #: inc/admin/custom-post-type.php:20
 msgid "Add New"
 msgstr "Ajouter"
 
 #: inc/admin/custom-post-type.php:21
-msgid "New Item"
-msgstr "Nouvel élément"
+msgid "New Project"
+msgstr "Nouveau projet"
 
 #: inc/admin/custom-post-type.php:22
-msgid "Edit Item"
-msgstr "Modifier un élément"
+msgid "Edit Project"
+msgstr "Modifier le projet"
 
 #: inc/admin/custom-post-type.php:23
-msgid "Update Item"
-msgstr "Mettre à jour l’élément"
+msgid "Update Project"
+msgstr "Mettre à jour le projet"
 
 #: inc/admin/custom-post-type.php:24
-msgid "View Item"
-msgstr "Afficher l’élément"
+msgid "View Project"
+msgstr "Voir le projet"
 
 #: inc/admin/custom-post-type.php:25
-msgid "Search Item"
-msgstr "Chercher un élément"
+msgid "Search Project"
+msgstr "Chercher un projet"
 
 #: inc/admin/custom-post-type.php:26
 msgid "Not found"
@@ -104,24 +106,24 @@ msgid "Use as featured image"
 msgstr "Utiliser comme image mise en avant"
 
 #: inc/admin/custom-post-type.php:32
-msgid "Insert into item"
-msgstr "Insérer dans l’élément"
+msgid "Insert into project"
+msgstr "Insérer dans le projet"
 
 #: inc/admin/custom-post-type.php:33
-msgid "Uploaded to this item"
-msgstr "Mis en ligne pour cet élément"
+msgid "Uploaded to this project"
+msgstr "Mis en ligne pour ce projet"
 
 #: inc/admin/custom-post-type.php:34
-msgid "Items list"
-msgstr "Liste des éléments"
+msgid "Projects list"
+msgstr "Liste des projets"
 
 #: inc/admin/custom-post-type.php:35
-msgid "Items list navigation"
-msgstr "Navigation de la liste des éléments"
+msgid "Projects list navigation"
+msgstr "Navigation de la liste des projets"
 
 #: inc/admin/custom-post-type.php:36
-msgid "Filter items list"
-msgstr "Filtrer la liste des éléments"
+msgid "Filter projects list"
+msgstr "Filtrer la liste des projets"
 
 #: inc/admin/custom-post-type.php:39
 msgid "TX Project"
@@ -137,7 +139,7 @@ msgstr "Rechercher des mises à jour&hellip;"
 
 #: inc/admin/ui/meta-boxes.php:12
 msgid "Transifex API"
-msgstr "Transifex API"
+msgstr "transifex API"
 
 #: inc/admin/ui/meta-boxes.php:14
 msgid "Project attributs"
@@ -148,28 +150,45 @@ msgid ""
 "In order to use WPT Transifex Updater, please <a href=\"profile.php#wptxu-"
 "transifex-account\">register your Transifex credentials</a>. "
 msgstr ""
-"Pour pouvoir utiliser WPT Transifex Updater, veuillez <a href=\"profile."
-"php#wptxu-transifex-account\">enregistrer vos identifiants de Transifex</a>. "
+"Pour pouvoir utiliser WPT transifex Updater, veuillez <a href=\"profile."
+"php#wptxu-transifex-account\">enregistrer vos identifiants de transifex</a>. "
+
+#: inc/admin/ui/notices.php:31
+msgid ""
+"Unauthorized:&nbsp;authentication is required to access the resource, please "
+"<a href=\"profile.php#wptxu-transifex-account\">register your Transifex "
+"credentials</a>."
+msgstr ""
+"Non autorisé  : une authentification est nécessaire pour pouvoir accéder à "
+"la ressource, veuillez <a href=\"profile.php#wptxu-transifex-account"
+"\">enregistrer vos identifiants de transifex</a>."
+
+#: inc/admin/ui/notices.php:35
+msgid ""
+"Project not found, check Transifex and local project must have the same slug."
+msgstr ""
+"Projet introuvable, le projet transifex et le projet en local doivent avoir "
+"le même identifiant."
 
 #: inc/admin/ui/options.php:15
 msgid "Transifex Account Informations"
-msgstr "Informations du compte Transifex"
+msgstr "Informations du compte transifex"
 
 #: inc/admin/ui/options.php:22
 msgid "Transifex Username"
-msgstr "Transifex Nom d’utilisateur"
+msgstr "Nom d’utilisateur de transifex"
 
 #: inc/admin/ui/options.php:26
 msgid "Please enter your Transifex username."
-msgstr "Veuillez saisir votre nom d’utilisateur de Transifex."
+msgstr "Veuillez saisir votre nom d’utilisateur de transifex."
 
 #: inc/admin/ui/options.php:31
 msgid "Transifex Password"
-msgstr "Transifex Mot de passe"
+msgstr "Mot de passe de transifex"
 
 #: inc/admin/ui/options.php:35
 msgid "Please enter your Transifex password."
-msgstr "Veuillez saisir votre mot de passe de Transifex."
+msgstr "Veuillez saisir votre mot de passe de transifex."
 
 #: inc/admin/ui/options.php:42
 msgid "Connected as&nbsp;:&nbsp;"
@@ -179,37 +198,37 @@ msgstr "Connecté en tant que : "
 msgid "Logout"
 msgstr "Déconnexion"
 
-#: inc/classes/wptxu-translation.php:31
+#: inc/classes/wptxu-translation.php:50
 msgid "Translation folder created."
 msgstr "Le dossier de traduction a été créé."
 
-#: inc/classes/wptxu-translation.php:48
+#: inc/classes/wptxu-translation.php:63
 msgid "Import po file on local filesystem."
 msgstr "Importation du fichier .po sur le système."
 
-#: inc/classes/wptxu-translation.php:56
+#: inc/classes/wptxu-translation.php:71
 msgid "Create mo file on local filesystem."
 msgstr "Création du fichier . mo sur le système."
 
-#: inc/classes/wptxu-translation.php:67
+#: inc/classes/wptxu-translation.php:82
 msgid "Create readme file on local filesystem."
 msgstr "Création du fichier readme sur le système."
 
-#: inc/classes/wptxu-translation.php:79
+#: inc/classes/wptxu-translation.php:94
 msgid "Translation is up to date!"
 msgstr "La traduction est à jour !"
 
-#: inc/classes/wptxu-translation.php:84
+#: inc/classes/wptxu-translation.php:99
 msgid "Translation update available!"
 msgstr "Mise à jour de traduction disponible !"
 
-#: inc/classes/wptxu-translation.php:84
+#: inc/classes/wptxu-translation.php:99
 msgid "Locale translation"
 msgstr "Traduction locale"
 
-#: inc/classes/wptxu-translation.php:84
+#: inc/classes/wptxu-translation.php:99
 msgid "Transifex translation"
-msgstr "traduction Transifex"
+msgstr "traduction transifex"
 
 #: inc/common/admin-bar.php:30
 msgid "Settings"
@@ -243,9 +262,13 @@ msgstr "Extensions"
 msgid "Themes"
 msgstr "Thèmes"
 
+#: inc/functions/functions.php:50
+msgid "Custom .mo filename"
+msgstr "Nom de fichier .mo personnalisé"
+
 #. Plugin Name of the plugin/theme
 msgid "WP Transifex Updater"
-msgstr "WP Transifex Updater"
+msgstr "WP transifex Updater"
 
 #. Plugin URI of the plugin/theme
 #. Author URI of the plugin/theme
@@ -254,11 +277,32 @@ msgstr "http://wp-translations.org/"
 
 #. Description of the plugin/theme
 msgid "Update translations from Transifex."
-msgstr "Mettre à jour des traductions depuis Transifex."
+msgstr "Mettre à jour des traductions depuis transifex."
 
 #. Author of the plugin/theme
 msgid "WP-Translations"
 msgstr "WP-Translations"
+
+#~ msgid "All Items"
+#~ msgstr "Tous les éléments"
+
+#~ msgid "New Item"
+#~ msgstr "Nouvel élément"
+
+#~ msgid "Edit Item"
+#~ msgstr "Modifier un élément"
+
+#~ msgid "Update Item"
+#~ msgstr "Mettre à jour l’élément"
+
+#~ msgid "View Item"
+#~ msgstr "Afficher l’élément"
+
+#~ msgid "Search Item"
+#~ msgstr "Chercher un élément"
+
+#~ msgid "Items list"
+#~ msgstr "Liste des éléments"
 
 #~ msgid "Integer"
 #~ msgstr "Entier"
