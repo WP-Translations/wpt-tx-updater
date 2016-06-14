@@ -8,7 +8,7 @@
 }
 
 #wpadminbar .wptxu-project-infos {
-	padding: .5em;
+	padding: .5em 0;
 }
 
 #wpadminbar .wptxu-project-infos p {
@@ -23,20 +23,17 @@
 }
 
 #wpadminbar ul.wptxu-response-list {
-	padding: .5em 0 .5em 1em;
+	padding: .5em 0 .5em 0;
 	border-top: 1px solid rgba(0,0,0, .1);
 }
 #wpadminbar ul.wptxu-response-list li {
-	list-style-position: inside !important;
-	list-style: square !important;
 	font-size: .9em !important;
+	padding-left: .5em;
 }
 #wpadminbar ul.wptxu-response-list li.check-api {
 	list-style: none !important;
 }
-#wpadminbar li.check-api:before {
-	position: relative;
-	top: 5px;
+#wpadminbar li.check-api span {
 	content: "\f463";
     font: normal 20px/1 dashicons;
     color: rgba(240,245,250,0.6);
@@ -44,4 +41,38 @@
 
 div[id*=wptxu-input-] {
 	margin-bottom: .5em;
+}
+
+.wptxu-notice{
+	padding-left: 1em;
+	border-left: 3px solid #FFF;
+}
+.wptxu-success {
+	color: #46b450;
+	border-color: #46b450;
+}
+.wptxu-warning {
+	color: #ffb900;
+	border-color: #ffb900;
+}
+.wptxu-error {
+	color: #dc3232;
+	border-color: #dc3232;
+}
+
+.wptxu-spin {
+	-webkit-animation: wptxu-spin 2s infinite linear;
+	animation: wptxu-spin 2s infinite linear;
+}
+@keyframes wptxu-spin {
+
+	0% {
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+	100% {
+		-webkit-transform: rotate(359deg);
+		transform: rotate(359deg);
+	}
+
 }
