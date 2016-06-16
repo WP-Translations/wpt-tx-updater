@@ -9,18 +9,18 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
 
-Update translations from transifex.org
+Easily update translations from transifex.com
 
 == Changelog ==
 
 = 1.0.5 =
-* Change Custom Post Type logo
+* Changed Custom Post Type logo
 
 = 1.0.4 =
-* Integrate Software Licensing
-* Bugs Fix
- * Change option name for license key
-* Update .pot file
+* Integrated Software Licensing
+* Bugs Fixed
+ * Changed option name for license key
+* Updated .pot file
 
 = 1.0.3 =
-* Move translations folder outside the plugin
+* Moved translations folder outside the plugin
