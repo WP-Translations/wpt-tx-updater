@@ -1,6 +1,6 @@
 <?php
 /**
-Plugin Name: WP Transifex Updater
+Plugin Name: WP transifex updater
 Plugin URI:  http://wp-translations.org/
 Description: Update translations from Transifex.
 Version:     1.0.4
@@ -14,7 +14,9 @@ Text Domain: wpt-tx-updater
 
 defined( 'ABSPATH' ) or die( 'Cheatin&#8217; uh?' );
 
-define( 'WPTXU_PLUGIN_SLUG', 'wpt-tx-updater' );
+define( 'WPTXU_VERSION', '1.0.4' );
+define( 'WPTXU_STORE_URL', 'http://sadler-jerome.fr' );
+define( 'WPTXU_SLUG', 'wpt-tx-updater' );
 define( 'WPTXU_FILE', __FILE__ );
 define( 'WPTXU_URL', plugin_dir_url( WPTXU_FILE ) );
 define( 'WPTXU_PATH', realpath( plugin_dir_path( WPTXU_FILE ) ) . '/' );
@@ -48,15 +50,21 @@ function wptxu_init() {
 
 	if ( is_admin() ) {
 
+		if( ! class_exists( 'WPTXU_Plugin_Updater' ) ) {
+			include( WPTXU_CLASSES_PATH . '/wptxu-updater.php' );
+		}
+
 		require( WPTXU_ADMIN_PATH . 'enqueue.php' );
 		require( WPTXU_FUNCTIONS_PATH . 'files.php' );
-		require( WPTXU_FUNCTIONS_PATH . 'dates.php' );
+		require( WPTXU_FUNCTIONS_PATH . 'license.php' );
 		require( WPTXU_ADMIN_PATH . 'options.php' );
 		require( WPTXU_ADMIN_UI_PATH . 'options.php' );
+		require( WPTXU_ADMIN_UI_PATH . 'actions.php' );
 		require( WPTXU_ADMIN_PATH . 'custom-post-type.php' );
 		require( WPTXU_ADMIN_UI_PATH . 'meta-boxes.php' );
 		require( WPTXU_ADMIN_UI_PATH . 'notices.php' );
 		require( WPTXU_COMMON_PATH . 'translation.php' );
+		require( WPTXU_API_PATH . 'wptxu-sl-api.php' );
 		require( WPTXU_API_PATH . 'wptxu-transifex-api.php' );
 		require( WPTXU_CLASSES_PATH . 'wptxu-translation.php' );
 
@@ -73,6 +81,25 @@ function wptxu_init() {
 }
 add_action( 'plugins_loaded', 'wptxu_init' );
 
+/**
+ * Setup the updater
+ *
+ * @since 1.0.4
+ */
+function wptxu_updater() {
+
+		$license_key = trim( get_option( 'wptxu_license_key' ) );
+
+		$edd_updater = new WPTXU_Plugin_Updater( WPTXU_STORE_URL, __FILE__, array(
+			'version' 	=> WPTXU_VERSION,
+			'license' 	=> $license_key, 		
+			'item_name' => WPTXU_SLUG,
+			'author' 	=> 'G3ronim0',
+			)
+		);
+
+}
+add_action( 'admin_init', 'wptxu_updater', 0 );
 
 /**
  * Load plugin textdomain
@@ -131,6 +158,11 @@ function wptxu_activation() {
 
 }
 
+/*
+ * Tell WP what to do when plugin is deactivated
+ *
+ * @since 1.0.0
+ */
 register_deactivation_hook( __FILE__, 'wptxu_deactivate' );
 function wptxu_deactivate() {
 	flush_rewrite_rules();

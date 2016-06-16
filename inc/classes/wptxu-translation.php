@@ -21,16 +21,14 @@ class WPTXU_Translation
 		$this->content = $content;
 
 		if( get_post_meta( $this->project_id, 'wptxu_mo_filename', true ) ) {
-			$this->filename = get_post_meta( $this->project_id, 'wptxu_mo_filename', true );
-		} else {
-			$this->filename = $text_domain;
+			$this->text_domain = get_post_meta( $this->project_id, 'wptxu_mo_filename', true );
 		}
 
 		if( $this->project_type == 'plugins') {
 
 			$this->text_domain_path = WPTXU_CONTENT_PATH . '/' . $this->project_type . '/' . $this->text_domain . '/' . $this->lang_code . '/';
-			$this->po_file_path = $this->text_domain_path . $this->filename . '-' . $this->lang_code . '.po';
-			$this->mo_file_path = $this->text_domain_path . $this->filename . '-' . $this->lang_code . '.mo';
+			$this->po_file_path = $this->text_domain_path . $this->text_domain . '-' . $this->lang_code . '.po';
+			$this->mo_file_path = $this->text_domain_path . $this->text_domain . '-' . $this->lang_code . '.mo';
 
 		} else {
 

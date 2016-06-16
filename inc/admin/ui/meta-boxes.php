@@ -14,4 +14,3 @@ function wptxu_metaboxes() {
 	add_meta_box( 'wptxu_project_meta_metaboxe', __( 'Project attributs', 'wpt-tx-updater' ), 'wptxu_project_attributs', 'wptxu-project', 'side', 'high' );
 
 }
-

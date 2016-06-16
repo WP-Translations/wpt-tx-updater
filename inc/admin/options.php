@@ -24,6 +24,7 @@ function wptxu_save_extra_profile_fields( $user_id ) {
 
 		update_usermeta( absint( $user_id ), 'wptxu_transifex_auth', base64_encode( $_POST['wptxu-tx-username'] . ':' . $_POST['wptxu-tx-password'] ) );
 		update_usermeta( absint( $user_id ), 'wptxu_transifex_user', $_POST['wptxu-tx-username'] );
+		update_option( 'wptxu_sl_key', $_POST['wptxu-sl-key'] );
 
 	}
 

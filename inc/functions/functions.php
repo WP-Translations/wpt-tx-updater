@@ -26,11 +26,11 @@ function wptxu_get_translation() {
 
 }
 
-	/**
-	 * Callback function for project metadata
-	 *
-	 * @since 1.0.1
-	 */
+/**
+ * Callback function for project metadata
+ *
+ * @since 1.0.1
+ */
 function wptxu_project_attributs( $post ) {
 
 	$type = get_post_meta( $post->ID, 'wptxu_project_type', true ); ?>
@@ -54,7 +54,7 @@ function wptxu_project_attributs( $post ) {
  	<?php
 }
 
-	/**
+/**
  * Save metadata for project metadata
  *
  * @since 1.0.1
@@ -69,11 +69,11 @@ function wptxu_project_attributs_save( $post_id, $post, $update ) {
 	}
 }
 
-	/**
-	 * Get state code
-	 *
-	 * @since 1.0.0
-	 */
+/**
+ * Get state code
+ *
+ * @since 1.0.0
+ */
 function wptxu_flag_locale( $lang_code ) {
 		$flag = explode( '_', $lang_code );
 		$flag = strtolower( $flag[1] );
@@ -81,11 +81,11 @@ function wptxu_flag_locale( $lang_code ) {
 		return $flag;
 }
 
-	/**
-	 * Get All Projects
-	 *
-	 * @since 1.0.0
-	 */
+/**
+ * Get All Projects
+ *
+ * @since 1.0.0
+ */
 function wptxu_get_projects() {
 
 	$args = array(
