@@ -42,15 +42,15 @@ define( 'WPTXU_CONTENT_PATH', WP_CONTENT_DIR . '/wpt-tx-updater' );
  */
 function wptxu_init() {
 
-	// Load translations
-    load_plugin_textdomain( 'wpt-tx-updater', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
+	// Load translations.
+	load_plugin_textdomain( 'wpt-tx-updater', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
 
 	require( WPTXU_FUNCTIONS_PATH . 'functions.php' );
-    require( WPTXU_COMMON_PATH . 'admin-bar.php' );
+	require( WPTXU_COMMON_PATH . 'admin-bar.php' );
 
 	if ( is_admin() ) {
 
-		if( ! class_exists( 'WPTXU_Plugin_Updater' ) ) {
+		if ( ! class_exists( 'WPTXU_Plugin_Updater' ) ) {
 			include( WPTXU_CLASSES_PATH . '/wptxu-updater.php' );
 		}
 
@@ -92,7 +92,7 @@ function wptxu_updater() {
 
 		$edd_updater = new WPTXU_Plugin_Updater( WPTXU_STORE_URL, __FILE__, array(
 			'version' 	=> WPTXU_VERSION,
-			'license' 	=> $license_key, 		
+			'license' 	=> $license_key,
 			'item_name' => WPTXU_SLUG,
 			'author' 	=> 'WP Translations Team',
 			)
