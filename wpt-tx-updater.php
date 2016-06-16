@@ -4,7 +4,7 @@ Plugin Name: WP transifex updater
 Plugin URI:  http://wp-translations.org/
 Description: Update translations from Transifex.
 Version:     1.0.4
-Author:      WP-Translations
+Author:      WP Translations Team
 Author URI:  http://wp-translations.org/
 License:     GPL2
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -88,13 +88,13 @@ add_action( 'plugins_loaded', 'wptxu_init' );
  */
 function wptxu_updater() {
 
-		$license_key = trim( get_option( 'wptxu_license_key' ) );
+		$license_key = trim( get_option( 'wptxu_sl_key' ) );
 
 		$edd_updater = new WPTXU_Plugin_Updater( WPTXU_STORE_URL, __FILE__, array(
 			'version' 	=> WPTXU_VERSION,
 			'license' 	=> $license_key, 		
 			'item_name' => WPTXU_SLUG,
-			'author' 	=> 'G3ronim0',
+			'author' 	=> 'WP Translations Team',
 			)
 		);
 
