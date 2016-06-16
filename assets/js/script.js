@@ -29,4 +29,55 @@ jQuery(document).ready(function($) {
 
 	});
 
+	$('#wptxu_license_activate').live( "click", function(e) {
+		e.preventDefault();
+
+		$.ajax({
+			type: "POST",
+			url: wptxu_ajax.ajaxurl,
+			data: {
+				'action': 'wptxu_activate_license',
+				'wptxu_nonce': wptxu_ajax.wptxu_nonce,
+			},
+			beforeSend: function(reponse) {
+				$('#wptxu-spinner-key').addClass('is-active');
+			},
+			success: function(response) {
+				$('#wptxu-spinner-key').removeClass('is-active');
+				$('#wptxu-key-response').html(response);
+			},
+			fail: function() {
+				$('h1').after('<div class="wptxu-error"><p>' + wptxu_ajax.ajax_fail.ajax_fail + '</p></div>');
+			}
+
+		});
+
+	});
+
+	$('#wptxu_license_deactivate').live( "click", function(e) {
+		e.preventDefault();
+
+		$.ajax({
+			type: "POST",
+			url: wptxu_ajax.ajaxurl,
+			data: {
+				'action': 'wptxu_deactivate_license',
+				'wptxu_nonce': wptxu_ajax.wptxu_nonce,
+			},
+			beforeSend: function(reponse) {
+				$('#wptxu-spinner-key').addClass('is-active');
+			},
+			success: function(response) {
+				$('#wptxu-spinner-key').removeClass('is-active');
+				$('#wptxu-key-response').html(response);
+				$('#wptxu-sl-key').val('');
+				$('h1').after('<div class="updated notice is-dismissible"><p>' + wptxu_ajax.license_deactivate.license_deactivate + '</p></div>');
+			},
+			fail: function() {
+				$('h1').after('<div class="wptxu-error"><p>' + wptxu_ajax.ajax_fail.ajax_fail + '</p></div>');
+			}
+		});
+
+	});
+
 });

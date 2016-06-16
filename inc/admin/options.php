@@ -22,8 +22,17 @@ function wptxu_save_extra_profile_fields( $user_id ) {
 
 	} else {
 
+		$old = get_option( 'wptxu_sl_key' );
+
+		if ( $old && $old != $new ) {
+			delete_option( 'wptxu_license_status' );
+			delete_transient( '_wptxu_license_data' );
+			delete_transient( '_wptxu_license_error' );
+		}
+
 		update_usermeta( absint( $user_id ), 'wptxu_transifex_auth', base64_encode( $_POST['wptxu-tx-username'] . ':' . $_POST['wptxu-tx-password'] ) );
 		update_usermeta( absint( $user_id ), 'wptxu_transifex_user', $_POST['wptxu-tx-username'] );
+		update_option( 'wptxu_sl_key', $_POST['wptxu-sl-key'] );
 
 	}
 
