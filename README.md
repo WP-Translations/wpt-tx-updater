@@ -1,1 +1,0 @@
-# wpt-tx-updater
