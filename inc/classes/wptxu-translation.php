@@ -14,17 +14,17 @@ class WPTXU_Translation
 	public function __construct( $project_id, $tx_infos, $project_type, $text_domain, $lang_code, $content ) {
 
 		$this->project_id = $project_id;
-		$this->project =  $tx_infos;
+		$this->project = $tx_infos;
 		$this->project_type = $project_type;
 		$this->text_domain = $text_domain;
 		$this->lang_code = $lang_code;
 		$this->content = $content;
 
-		if( get_post_meta( $this->project_id, 'wptxu_mo_filename', true ) ) {
+		if ( get_post_meta( $this->project_id, 'wptxu_mo_filename', true ) ) {
 			$this->text_domain = get_post_meta( $this->project_id, 'wptxu_mo_filename', true );
 		}
 
-		if( $this->project_type == 'plugins') {
+		if ( $this->project_type == 'plugins' ) {
 
 			$this->text_domain_path = WPTXU_CONTENT_PATH . '/' . $this->project_type . '/' . $this->text_domain . '/' . $this->lang_code . '/';
 			$this->po_file_path = $this->text_domain_path . $this->text_domain . '-' . $this->lang_code . '.po';
@@ -41,17 +41,17 @@ class WPTXU_Translation
 	}
 
 
-	public function make_translation(){
+	public function make_translation() {
 
 		if ( ! is_dir( $this->text_domain_path ) ) {
 			wptxu_mkdir_p( $this->text_domain_path );
 			echo '<li class="wptxu-success">' . __( 'Translation folder created.', 'wpt-tx-updater' ) . '</li>';
 	    }
 
-    	$this->_save_po_file();
-    	$this->_create_mo_file();
-    	$this->_create_readme_file();
-    	$this->_is_up_to_date();
+		$this->_save_po_file();
+		$this->_create_mo_file();
+		$this->_create_readme_file();
+		$this->_is_up_to_date();
 
 	}
 
@@ -98,7 +98,6 @@ class WPTXU_Translation
 				return false;
 
 			}
-
 		} else {
 
 			return false;
@@ -106,5 +105,4 @@ class WPTXU_Translation
 		}
 
 	}
-
 }

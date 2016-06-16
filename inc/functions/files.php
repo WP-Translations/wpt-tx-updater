@@ -98,5 +98,5 @@ function wptxu_scandir( $dir ) {
 	if ( is_dir( $target ) ) {
 		$resources = scandir( $target );
 		return $resources;
-	} 
+	}
 }

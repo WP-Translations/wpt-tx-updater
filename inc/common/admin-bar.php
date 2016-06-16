@@ -20,8 +20,7 @@ function wptxu_admin_bar( $wp_admin_bar ) {
 		'href'  => '#',
 	));
 
-	$wp_admin_bar->add_group(array("id"=>"wptxu_setting_group", "parent"=>"wptxu"));
-
+	$wp_admin_bar->add_group( array( 'id' => 'wptxu_setting_group', 'parent' => 'wptxu' ) );
 
 	// Settings
 	$wp_admin_bar->add_node(array(
@@ -35,7 +34,7 @@ function wptxu_admin_bar( $wp_admin_bar ) {
 	$wp_admin_bar->add_node(array(
 		'parent'	=> 'wptxu_setting_group',
 		'id' 		=> 'All-projects',
-		'title' 	=> __('All Projects', 'wpt-tx-updater'),
+		'title' 	=> __( 'All Projects', 'wpt-tx-updater' ),
 		'href' 		=> admin_url() . 'edit.php?post_type=wptxu-project',
 	));
 
@@ -43,14 +42,14 @@ function wptxu_admin_bar( $wp_admin_bar ) {
 	$wp_admin_bar->add_node(array(
 		'parent'	=> 'wptxu_setting_group',
 		'id' 		=> 'New-project',
-		'title' 	=> __('New Project', 'wpt-tx-updater'),
+		'title' 	=> __( 'New Project', 'wpt-tx-updater' ),
 		'href' 		=> admin_url() . 'post-new.php?post_type=wptxu-project',
 	));
 
 	$user_id = get_current_user_id();
 	if ( get_the_author_meta( 'wptxu_transifex_auth', $user_id ) ) {
 
-		$wp_admin_bar->add_group(array("id"=>"wptxu_translations_group", "parent"=>"wptxu"));
+		$wp_admin_bar->add_group( array( 'id' => 'wptxu_translations_group', 'parent' => 'wptxu' ) );
 
 		$projects = wptxu_get_projects();
 		$action = 'update_translation';
@@ -68,19 +67,17 @@ function wptxu_admin_bar( $wp_admin_bar ) {
 				'parent'	=> 'wptxu_translations_group',
 				'id' 		=> 'project-' . $project->ID,
 				'title' 	=> $project->post_title,
-				
 			));
 			$wp_admin_bar->add_node(array(
 				'parent'	=> 'project-' . $project->ID,
-				'id' 		=> 'project-actions-' . $project->ID ,
+				'id' 		=> 'project-actions-' . $project->ID,
 				'title' 	=> '<span class="flag-icon flag-icon-' . $icon . '"></span>&nbsp;'.__( 'Translation for:&nbsp;', 'wpt-tx-updater' ) . $lang_code,
 				'meta' 		=> array(
-					'target'   => '_self',
-		            'html'     => $subnode_content, 
+				'target'   => '_self',
+				'html'     => $subnode_content,
 				),
 			));
 		}
-
 	}
 
 }
@@ -92,8 +89,8 @@ function wptxu_admin_bar( $wp_admin_bar ) {
  */
 add_action( 'admin_bar_init', 'wptxu_admin_bar_styles' );
 function wptxu_admin_bar_styles() {
-	
-	if( ! is_admin() || is_admin_bar_showing() ) {
+
+	if ( ! is_admin() || is_admin_bar_showing() ) {
 
 		$translation_array = array(
 			'ajax_loading' => __( 'Check for update...', 'wpt-tx-updater' ),
@@ -113,5 +110,5 @@ function wptxu_admin_bar_styles() {
 		) );
 
 	}
-	
+
 }
