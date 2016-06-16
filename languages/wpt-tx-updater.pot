@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: WP Transifex Updater\n"
-"POT-Creation-Date: 2016-06-14 14:18+0200\n"
+"POT-Creation-Date: 2016-06-16 10:08+0200\n"
 "PO-Revision-Date: 2016-06-09 09:53+0200\n"
 "Last-Translator: FX Bénard <fx@fxbenard.com>\n"
 "Language-Team: FX Bénard <fx@fxbenard.com>\n"
@@ -135,6 +135,42 @@ msgstr ""
 msgid "Check for update..."
 msgstr ""
 
+#: inc/admin/enqueue.php:13
+msgid "License deactivate"
+msgstr ""
+
+#: inc/admin/enqueue.php:14
+msgid "Please try again soon."
+msgstr ""
+
+#: inc/admin/ui/actions.php:12
+msgid "Activate License"
+msgstr ""
+
+#: inc/admin/ui/actions.php:28
+msgid "License key never expires."
+msgstr ""
+
+#: inc/admin/ui/actions.php:31
+#, php-format
+msgid ""
+"Your license key expires soon! It expires on %s. <a href=\"%s\" target="
+"\"_blank\" title=\"Renew license\">Renew your license key</a>."
+msgstr ""
+
+#: inc/admin/ui/actions.php:37
+#, php-format
+msgid "Your license key expires on %s."
+msgstr ""
+
+#: inc/admin/ui/actions.php:44
+msgid "License active"
+msgstr ""
+
+#: inc/admin/ui/actions.php:46
+msgid "Deactivate License"
+msgstr ""
+
 #: inc/admin/ui/meta-boxes.php:12
 msgid "transifex API"
 msgstr ""
@@ -162,64 +198,133 @@ msgid ""
 "slug."
 msgstr ""
 
-#: inc/admin/ui/options.php:15
+#: inc/admin/ui/notices.php:64
+#, php-format
+msgid ""
+"Your license key expired. Please <a href=\"%s\" target=\"_blank\" title="
+"\"Renew your license key\">renew your license key</a>."
+msgstr ""
+
+#: inc/admin/ui/notices.php:71
+#, php-format
+msgid ""
+"Invalid license. Please <a href=\"%s\" target=\"_blank\" title=\"Visit "
+"account page\">visit your account page</a> and verify it."
+msgstr ""
+
+#: inc/admin/ui/notices.php:78
+#, php-format
+msgid ""
+"There was a problem activating your license key, please try again or "
+"contact support. Error code: %s"
+msgstr ""
+
+#: inc/admin/ui/notices.php:82
+msgid "This license does not belong to the product you have entered it for."
+msgstr ""
+
+#: inc/admin/ui/notices.php:86
+#, php-format
+msgid ""
+"Your license key has reached its activation limit. <a href=\"%s\">View "
+"possible upgrades</a> now."
+msgstr ""
+
+#: inc/admin/ui/options.php:24
+msgid "License key"
+msgstr ""
+
+#: inc/admin/ui/options.php:28
+msgid "Please enter your WPT transifex updater license key."
+msgstr ""
+
+#: inc/admin/ui/options.php:58
 msgid "transifex Account Informations"
 msgstr ""
 
-#: inc/admin/ui/options.php:22
+#: inc/admin/ui/options.php:65
 msgid "transifex Username"
 msgstr ""
 
-#: inc/admin/ui/options.php:26
+#: inc/admin/ui/options.php:69
 msgid "Please enter your transifex username."
 msgstr ""
 
-#: inc/admin/ui/options.php:31
+#: inc/admin/ui/options.php:74
 msgid "transifex Password"
 msgstr ""
 
-#: inc/admin/ui/options.php:35
+#: inc/admin/ui/options.php:78
 msgid "Please enter your transifex password."
 msgstr ""
 
-#: inc/admin/ui/options.php:42
+#: inc/admin/ui/options.php:85
 msgid "Connected as:&nbsp;"
 msgstr ""
 
-#: inc/admin/ui/options.php:44
+#: inc/admin/ui/options.php:87
 msgid "Logout"
 msgstr ""
 
-#: inc/classes/wptxu-translation.php:50
+#: inc/api/wptxu-sl-api.php:39
+#, php-format
+msgid ""
+"<p class=\"wptxu-error\"><span class=\"dashicons dashicons-info\"></"
+"span>There is a problem with remote site, please try again. %s</p>"
+msgstr ""
+
+#: inc/classes/wptxu-translation.php:48
 msgid "Translation folder created."
 msgstr ""
 
-#: inc/classes/wptxu-translation.php:63
+#: inc/classes/wptxu-translation.php:61
 msgid "Import po file on local filesystem."
 msgstr ""
 
-#: inc/classes/wptxu-translation.php:71
+#: inc/classes/wptxu-translation.php:69
 msgid "Create mo file on local filesystem."
 msgstr ""
 
-#: inc/classes/wptxu-translation.php:82
+#: inc/classes/wptxu-translation.php:80
 msgid "Create readme file on local filesystem."
 msgstr ""
 
-#: inc/classes/wptxu-translation.php:94
+#: inc/classes/wptxu-translation.php:92
 msgid "Translation is up to date!"
 msgstr ""
 
-#: inc/classes/wptxu-translation.php:99
+#: inc/classes/wptxu-translation.php:97
 msgid "Translation update available!"
 msgstr ""
 
-#: inc/classes/wptxu-translation.php:99
+#: inc/classes/wptxu-translation.php:97
 msgid "Locale translation"
 msgstr ""
 
-#: inc/classes/wptxu-translation.php:99
+#: inc/classes/wptxu-translation.php:97
 msgid "transifex translation"
+msgstr ""
+
+#: inc/classes/wptxu-updater.php:186
+#, php-format
+msgid ""
+"There is a new version of %1$s available. %2$sView version %3$s details"
+"%4$s."
+msgstr ""
+
+#: inc/classes/wptxu-updater.php:194
+#, php-format
+msgid ""
+"There is a new version of %1$s available. %2$sView version %3$s details"
+"%4$s or %5$supdate now%6$s."
+msgstr ""
+
+#: inc/classes/wptxu-updater.php:337
+msgid "You do not have permission to install plugin updates"
+msgstr ""
+
+#: inc/classes/wptxu-updater.php:337
+msgid "Error"
 msgstr ""
 
 #: inc/common/admin-bar.php:30
@@ -234,7 +339,8 @@ msgstr ""
 msgid "Translation for:&nbsp;"
 msgstr ""
 
-#: inc/common/translation.php:18
+#: inc/common/translation.php:18 inc/functions/license.php:15
+#: inc/functions/license.php:52
 msgid "Cheatin&#8217; uh?"
 msgstr ""
 
@@ -259,7 +365,7 @@ msgid "Custom .mo filename"
 msgstr ""
 
 #. Plugin Name of the plugin/theme
-msgid "WP Transifex Updater"
+msgid "WP transifex updater"
 msgstr ""
 
 #. Plugin URI of the plugin/theme
