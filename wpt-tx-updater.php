@@ -5,7 +5,7 @@ Plugin URI:  http://wp-translations.org/
 Description: The easiest way to update translations from transifex with WordPress.
 
 Version:     1.0.5
-Author:      WP Translations Team
+Author:      WP-Translations Team
 Author URI:  http://wp-translations.org/
 License:     GPL2
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
