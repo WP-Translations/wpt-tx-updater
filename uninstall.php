@@ -15,5 +15,5 @@ delete_transient( '_wptxu_license_data' );
 delete_transient( '_wptxu_license_error' );
 
 // Delete plugin options.
-delete_option( 'wptxu_license_key' );
+delete_option( 'wptxu_sl_key' );
 delete_option( 'wptxu_license_status' );
