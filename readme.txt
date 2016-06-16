@@ -9,7 +9,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
 
-Update translations from transifex.org
+Update translations from transifex.com
 
 == Changelog ==
 
