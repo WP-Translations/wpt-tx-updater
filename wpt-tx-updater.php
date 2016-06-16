@@ -2,7 +2,8 @@
 /**
 Plugin Name: WP transifex updater
 Plugin URI:  http://wp-translations.org/
-Description: Update translations from Transifex.
+Description: The easiest way to update translations from transifex with WordPress.
+
 Version:     1.0.5
 Author:      WP Translations Team
 Author URI:  http://wp-translations.org/
@@ -10,6 +11,11 @@ License:     GPL2
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Domain Path: /languages
 Text Domain: wpt-tx-updater
+
+	@package WPTXU
+	@category Core
+	@author WP Translations Team
+	@version 1.0.5
  */
 
 defined( 'ABSPATH' ) or die( 'Cheatin&#8217; uh?' );
