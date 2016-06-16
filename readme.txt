@@ -1,5 +1,5 @@
 === WPT transifex updater ===
-Contributors: WP Translations Team
+Contributors: WP-Translations Team
 Tags: i18n, Internationalization, transifex
 Requires at least: 3.7.0
 Tested up to: 4.5.2
