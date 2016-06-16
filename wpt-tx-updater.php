@@ -3,7 +3,7 @@
 Plugin Name: WP transifex updater
 Plugin URI:  http://wp-translations.org/
 Description: Update translations from Transifex.
-Version:     1.0.4
+Version:     1.0.5
 Author:      WP Translations Team
 Author URI:  http://wp-translations.org/
 License:     GPL2
@@ -14,7 +14,7 @@ Text Domain: wpt-tx-updater
 
 defined( 'ABSPATH' ) or die( 'Cheatin&#8217; uh?' );
 
-define( 'WPTXU_VERSION', '1.0.4' );
+define( 'WPTXU_VERSION', '1.0.5' );
 define( 'WPTXU_STORE_URL', 'http://sadler-jerome.fr' );
 define( 'WPTXU_SLUG', 'wpt-tx-updater' );
 define( 'WPTXU_FILE', __FILE__ );
