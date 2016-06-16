@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: WP Transifex Updater\n"
-"POT-Creation-Date: 2016-06-16 10:14+0200\n"
-"PO-Revision-Date: 2016-06-16 10:32+0200\n"
+"POT-Creation-Date: 2016-06-16 16:21+0200\n"
+"PO-Revision-Date: 2016-06-16 16:22+0200\n"
 "Last-Translator: FX Bénard <fx@fxbenard.com>\n"
 "Language-Team: FX Bénard <fx@fxbenard.com>\n"
 "Language: fr_FR\n"
@@ -47,7 +47,7 @@ msgstr "Archives du projet"
 msgid "Parent Project:"
 msgstr "Projet parent :"
 
-#: inc/admin/custom-post-type.php:18 inc/common/admin-bar.php:38
+#: inc/admin/custom-post-type.php:18 inc/common/admin-bar.php:37
 msgid "All Projects"
 msgstr "Tous les projets"
 
@@ -59,7 +59,7 @@ msgstr "Ajouter un nouveau projet"
 msgid "Add New"
 msgstr "Ajouter"
 
-#: inc/admin/custom-post-type.php:21 inc/common/admin-bar.php:46
+#: inc/admin/custom-post-type.php:21 inc/common/admin-bar.php:45
 msgid "New Project"
 msgstr "Nouveau projet"
 
@@ -131,7 +131,7 @@ msgstr "Project TX"
 msgid "Post Type Description"
 msgstr "Description du type de contenu"
 
-#: inc/admin/enqueue.php:12 inc/common/admin-bar.php:99
+#: inc/admin/enqueue.php:12 inc/common/admin-bar.php:96
 msgid "Check for update..."
 msgstr "Rechercher des mises à jour&hellip;"
 
@@ -344,25 +344,25 @@ msgstr ""
 "Une nouvelle version de %1$s est disponible. %2$sAfficher les détails%4$s de "
 "la version %3$s ou %5$smettez à jour maintenant%6$s."
 
-#: inc/classes/wptxu-updater.php:337
+#: inc/classes/wptxu-updater.php:336
 msgid "You do not have permission to install plugin updates"
 msgstr ""
 "Vous n’avez pas les droits suffisants pour installer les mises à jour de "
 "l’extension."
 
-#: inc/classes/wptxu-updater.php:337
+#: inc/classes/wptxu-updater.php:336
 msgid "Error"
 msgstr "Erreur"
 
-#: inc/common/admin-bar.php:30
+#: inc/common/admin-bar.php:29
 msgid "Settings"
 msgstr "Réglages"
 
-#: inc/common/admin-bar.php:63 inc/functions/functions.php:17
+#: inc/common/admin-bar.php:62 inc/functions/functions.php:17
 msgid "Update translation"
 msgstr "Mettre à jour la traduction"
 
-#: inc/common/admin-bar.php:76
+#: inc/common/admin-bar.php:74
 msgid "Translation for:&nbsp;"
 msgstr "Traduction pour : "
 
@@ -401,12 +401,14 @@ msgid "http://wp-translations.org/"
 msgstr "http://wp-translations.org/"
 
 #. Description of the plugin/theme
-msgid "Update translations from Transifex."
-msgstr "Mettre à jour des traductions depuis transifex."
+msgid "The easiest way to update translations from transifex with WordPress."
+msgstr ""
+"La meilleure façon de mettre à jour les traductions de transifex avec "
+"WordPress."
 
 #. Author of the plugin/theme
-msgid "WP-Translations"
-msgstr "WP-Translations"
+msgid "WP Translations Team"
+msgstr "WP Translations Team"
 
 #~ msgid "All Items"
 #~ msgstr "Tous les éléments"
