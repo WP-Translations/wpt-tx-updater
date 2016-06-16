@@ -45,7 +45,7 @@ function wptxu_register_cpt()
         'show_ui' => true,
         'show_in_menu' => true,
         'menu_position' => 3,
-        'menu_icon' => 'dashicons-translation',
+        'menu_icon' => WPTXU_URL_ASSETS_IMG . 'tx.png',
         'show_in_admin_bar' => false,
         'show_in_nav_menus' => false,
         'can_export' => true,
