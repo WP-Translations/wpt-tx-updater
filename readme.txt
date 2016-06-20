@@ -18,8 +18,7 @@ Easily update translations from transifex.com
 
 = 1.0.4 =
 * Integrated Software Licensing
-* Bugs Fixed
- * Changed option name for license key
+* Bug Fixed: Changed option name for license key
 * Updated .pot file
 
 = 1.0.3 =
