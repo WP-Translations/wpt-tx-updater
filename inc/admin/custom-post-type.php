@@ -9,7 +9,7 @@ defined( 'ABSPATH' ) or die( 'Cheatin&#8217; uh?' );
 function wptxu_register_cpt() {
 
 	$labels = array(
-		'name' => _x( 'Projects', 'Post Type General Name', 'wptxu' ),
+		'name' => _x( 'Projects', 'Post Type General Name', 'wpt-tx-updater' ),
 		'singular_name' => _x( 'Project', 'Post Type Singular Name', 'wpt-tx-updater' ),
 		'menu_name' => __( 'TX Projects', 'wpt-tx-updater' ),
 		'name_admin_bar' => __( 'Post Type', 'wpt-tx-updater' ),
