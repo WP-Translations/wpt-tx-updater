@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: WP Transifex Updater\n"
-"POT-Creation-Date: 2016-06-20 16:53+0200\n"
-"PO-Revision-Date: 2016-06-20 16:53+0200\n"
+"POT-Creation-Date: 2016-06-20 17:05+0200\n"
+"PO-Revision-Date: 2016-06-20 17:06+0200\n"
 "Last-Translator: FX Bénard <fx@fxbenard.com>\n"
 "Language-Team: FX Bénard <fx@fxbenard.com>\n"
 "Language: fr_FR\n"
@@ -201,10 +201,9 @@ msgstr ""
 "\">enregistrer vos identifiants de transifex</a>."
 
 #: inc/admin/ui/notices.php:35
-msgid ""
-"Project not found, check transifex and local project must have the same slug."
+msgid "Project not found: transifex and local project must have the same slug."
 msgstr ""
-"Projet introuvable, le projet transifex et le projet en local doivent avoir "
+"Projet introuvable : le projet transifex et le projet en local doivent avoir "
 "le même identifiant."
 
 #: inc/admin/ui/notices.php:64
@@ -258,7 +257,7 @@ msgid "Please enter your WPT transifex updater license key."
 msgstr "Veuillez saisir votre clé de licence de WPT transifex updater."
 
 #: inc/admin/ui/options.php:58
-msgid "transifex Account Informations"
+msgid "transifex Account Information"
 msgstr "Informations du compte transifex"
 
 #: inc/admin/ui/options.php:65

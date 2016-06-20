@@ -31,7 +31,7 @@ function wptxu_extra_profile_fields( $user ) {
         <tr>
             <th></th>
             <td id="wptxu-key-response">
-                
+
                 <?php
 
 				if ( false !== $license ) {
@@ -55,7 +55,7 @@ function wptxu_extra_profile_fields( $user ) {
 
     </table>
 
-    <h2 id="wptxu-transifex-account"><?php _e( 'transifex Account Informations', 'wpt-tx-updater' ); ?></h2>
+    <h2 id="wptxu-transifex-account"><?php _e( 'transifex Account Information', 'wpt-tx-updater' ); ?></h2>
 
     <table class="form-table">
 

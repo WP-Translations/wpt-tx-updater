@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: WP Transifex Updater\n"
-"POT-Creation-Date: 2016-06-20 16:52+0200\n"
+"POT-Creation-Date: 2016-06-20 17:05+0200\n"
 "PO-Revision-Date: 2016-06-09 09:53+0200\n"
 "Last-Translator: FX Bénard <fx@fxbenard.com>\n"
 "Language-Team: FX Bénard <fx@fxbenard.com>\n"
@@ -194,8 +194,7 @@ msgstr ""
 
 #: inc/admin/ui/notices.php:35
 msgid ""
-"Project not found, check transifex and local project must have the same "
-"slug."
+"Project not found: transifex and local project must have the same slug."
 msgstr ""
 
 #: inc/admin/ui/notices.php:64
@@ -239,7 +238,7 @@ msgid "Please enter your WPT transifex updater license key."
 msgstr ""
 
 #: inc/admin/ui/options.php:58
-msgid "transifex Account Informations"
+msgid "transifex Account Information"
 msgstr ""
 
 #: inc/admin/ui/options.php:65
