@@ -1,6 +1,6 @@
 <?php
 /**
-Plugin Name: WP transifex updater
+Plugin Name: WPT transifex Updater
 Plugin URI:  http://wp-translations.org/
 Description: The easiest way to update translations from transifex with WordPress.
 
@@ -14,7 +14,7 @@ Text Domain: wpt-tx-updater
 
 	@package WPTXU
 	@category Core
-	@author WP Translations Team
+	@author WP-Translations Team
 	@version 1.0.5
  */
 
@@ -100,7 +100,7 @@ function wptxu_updater() {
 			'version' 	=> WPTXU_VERSION,
 			'license' 	=> $license_key,
 			'item_name' => WPTXU_SLUG,
-			'author' 	=> 'WP Translations Team',
+			'author' 	=> 'WP-Translations Team',
 			)
 		);
 
