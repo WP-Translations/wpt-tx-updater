@@ -16,7 +16,7 @@ function wptxu_extra_profile_fields( $user ) {
 
 	?>
 
-    <h2 id="wptxu-sl">WPT transifex updater</h2>
+    <h2 id="wptxu-sl"><?php _e( 'WPT transifex updater', 'wpt-tx-updater' ); ?></h2>
 
     <table class="form-table">
 
