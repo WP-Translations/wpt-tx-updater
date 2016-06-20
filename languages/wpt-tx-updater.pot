@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: WP Transifex Updater\n"
-"POT-Creation-Date: 2016-06-16 16:21+0200\n"
+"POT-Creation-Date: 2016-06-20 16:52+0200\n"
 "PO-Revision-Date: 2016-06-09 09:53+0200\n"
 "Last-Translator: FX Bénard <fx@fxbenard.com>\n"
 "Language-Team: FX Bénard <fx@fxbenard.com>\n"
@@ -176,7 +176,7 @@ msgid "transifex API"
 msgstr ""
 
 #: inc/admin/ui/meta-boxes.php:14
-msgid "Project attributs"
+msgid "Project attributes"
 msgstr ""
 
 #: inc/admin/ui/notices.php:16
@@ -365,7 +365,7 @@ msgid "Custom .mo filename"
 msgstr ""
 
 #. Plugin Name of the plugin/theme
-msgid "WP transifex updater"
+msgid "WPT transifex Updater"
 msgstr ""
 
 #. Plugin URI of the plugin/theme
@@ -378,5 +378,5 @@ msgid "The easiest way to update translations from transifex with WordPress."
 msgstr ""
 
 #. Author of the plugin/theme
-msgid "WP Translations Team"
+msgid "WP-Translations Team"
 msgstr ""
