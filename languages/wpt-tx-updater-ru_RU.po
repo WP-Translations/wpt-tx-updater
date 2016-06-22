@@ -1,0 +1,406 @@
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: WP Transifex Updater\n"
+"POT-Creation-Date: 2016-06-20 17:05+0200\n"
+"PO-Revision-Date: 2016-06-09 09:53+0200\n"
+"Last-Translator: Pavel Golub <pavlo.golub@gmail.com>, 2016\n"
+"Language-Team: Russian (Russia) (https://www.transifex.com/wp-translations/teams/64435/ru_RU/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ru_RU\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
+"X-Generator: Poedit 1.8.8\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Poedit-SearchPathExcluded-1: inc/libs\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-WPHeader: wpt-tx-updater.php\n"
+
+#: inc/admin/custom-post-type.php:12
+msgctxt "Post Type General Name"
+msgid "Projects"
+msgstr "Проекты"
+
+#: inc/admin/custom-post-type.php:13
+msgctxt "Post Type Singular Name"
+msgid "Project"
+msgstr "Проект"
+
+#: inc/admin/custom-post-type.php:14
+msgid "TX Projects"
+msgstr "Проекты TX"
+
+#: inc/admin/custom-post-type.php:15
+msgid "Post Type"
+msgstr "Тип записи"
+
+#: inc/admin/custom-post-type.php:16
+msgid "Project Archives"
+msgstr "Архивы проекта"
+
+#: inc/admin/custom-post-type.php:17
+msgid "Parent Project:"
+msgstr "Родительский проект:"
+
+#: inc/admin/custom-post-type.php:18 inc/common/admin-bar.php:37
+msgid "All Projects"
+msgstr "Все проекты"
+
+#: inc/admin/custom-post-type.php:19
+msgid "Add New Project"
+msgstr "Добавить новый проект"
+
+#: inc/admin/custom-post-type.php:20
+msgid "Add New"
+msgstr "Добавить новый"
+
+#: inc/admin/custom-post-type.php:21 inc/common/admin-bar.php:45
+msgid "New Project"
+msgstr "Новый проект"
+
+#: inc/admin/custom-post-type.php:22
+msgid "Edit Project"
+msgstr "Редактировать проект"
+
+#: inc/admin/custom-post-type.php:23
+msgid "Update Project"
+msgstr "Обновить проект"
+
+#: inc/admin/custom-post-type.php:24
+msgid "View Project"
+msgstr "Просмотреть проект"
+
+#: inc/admin/custom-post-type.php:25
+msgid "Search Project"
+msgstr "Искать проект"
+
+#: inc/admin/custom-post-type.php:26
+msgid "Not found"
+msgstr "Не найдено"
+
+#: inc/admin/custom-post-type.php:27
+msgid "Not found in Trash"
+msgstr "Не найдено в корзине"
+
+#: inc/admin/custom-post-type.php:28
+msgid "Featured Image"
+msgstr "Избранное изображение"
+
+#: inc/admin/custom-post-type.php:29
+msgid "Set featured image"
+msgstr "Установить избранное изображение"
+
+#: inc/admin/custom-post-type.php:30
+msgid "Remove featured image"
+msgstr "Удалить избранное изображение"
+
+#: inc/admin/custom-post-type.php:31
+msgid "Use as featured image"
+msgstr "Использовать как избранное изображение"
+
+#: inc/admin/custom-post-type.php:32
+msgid "Insert into project"
+msgstr "Вставить в проект"
+
+#: inc/admin/custom-post-type.php:33
+msgid "Uploaded to this project"
+msgstr "Загружено в этот проект"
+
+#: inc/admin/custom-post-type.php:34
+msgid "Projects list"
+msgstr "Список проектов"
+
+#: inc/admin/custom-post-type.php:35
+msgid "Projects list navigation"
+msgstr "Навигация по списку проектов"
+
+#: inc/admin/custom-post-type.php:36
+msgid "Filter projects list"
+msgstr "Фильтр списка проектов"
+
+#: inc/admin/custom-post-type.php:39
+msgid "TX Project"
+msgstr "Проект TX"
+
+#: inc/admin/custom-post-type.php:40
+msgid "Post Type Description"
+msgstr "Описание типа записи"
+
+#: inc/admin/enqueue.php:12 inc/common/admin-bar.php:96
+msgid "Check for update..."
+msgstr "Проверить обновления…"
+
+#: inc/admin/enqueue.php:13
+msgid "License deactivate"
+msgstr "Деактивировать лицензию"
+
+#: inc/admin/enqueue.php:14
+msgid "Please try again soon."
+msgstr "Пожалуйста, попробуйте позже."
+
+#: inc/admin/ui/actions.php:12
+msgid "Activate License"
+msgstr "Активировать лицензию"
+
+#: inc/admin/ui/actions.php:28
+msgid "License key never expires."
+msgstr "Лицензионный ключ никогда не истекает."
+
+#: inc/admin/ui/actions.php:31
+#, php-format
+msgid ""
+"Your license key expires soon! It expires on %s. <a href=\"%s\" "
+"target=\"_blank\" title=\"Renew license\">Renew your license key</a>."
+msgstr ""
+"Ваш лицензионный ключ скоро истечет! Срок истечения %s. <a href=\"%s\" "
+"target=\"_blank\" title=\"Обновить лицензию\">Обновите ваш лицензионный "
+"ключ</a>."
+
+#: inc/admin/ui/actions.php:37
+#, php-format
+msgid "Your license key expires on %s."
+msgstr "Ваш лицензионный ключ истекает %s."
+
+#: inc/admin/ui/actions.php:44
+msgid "License active"
+msgstr "Лицензия активна"
+
+#: inc/admin/ui/actions.php:46
+msgid "Deactivate License"
+msgstr "Деактивировать лицензию"
+
+#: inc/admin/ui/meta-boxes.php:12
+msgid "transifex API"
+msgstr "API transifex"
+
+#: inc/admin/ui/meta-boxes.php:14
+msgid "Project attributes"
+msgstr "Атрибуты проекта"
+
+#: inc/admin/ui/notices.php:16
+msgid ""
+"In order to use WPT transifex updater, please <a href=\"profile.php#wptxu-"
+"transifex-account\">register your transifex credentials</a>. "
+msgstr ""
+"Чтобы воспользоваться плагином WPT transifex updater, пожалуйста, <a "
+"href=\"profile.php#wptxu-transifex-account\">зарегистрируйте свои данные "
+"transifex</a>. "
+
+#: inc/admin/ui/notices.php:31
+msgid ""
+"Unauthorized:&nbsp;authentication is required to access the resource, please"
+" <a href=\"profile.php#wptxu-transifex-account\">register your transifex "
+"credentials</a>."
+msgstr ""
+"Не авторизовано:&nbsp;требуется аутентификация для доступа к ресурсу. "
+"Пожалуйста, <a href=\"profile.php#wptxu-transifex-account\"> зарегистрируйте"
+" учетные данные transifex </a>."
+
+#: inc/admin/ui/notices.php:35
+msgid ""
+"Project not found: transifex and local project must have the same slug."
+msgstr ""
+"Проект не найден: у локального проекта и проекта transifex должны совпадать "
+"ярлыки."
+
+#: inc/admin/ui/notices.php:64
+#, php-format
+msgid ""
+"Your license key expired. Please <a href=\"%s\" target=\"_blank\" "
+"title=\"Renew your license key\">renew your license key</a>."
+msgstr ""
+"Ваш лицензионный ключ истек. Пожалуйста, <a href=\"%s\" target=\"_blank\" "
+"title=\"Обновите ваш лицензионный ключ\">обновите ваш лицензионный ключ</a>."
+
+#: inc/admin/ui/notices.php:71
+#, php-format
+msgid ""
+"Invalid license. Please <a href=\"%s\" target=\"_blank\" title=\"Visit "
+"account page\">visit your account page</a> and verify it."
+msgstr ""
+"Неверная лицензия. Пожалуйста, <a href=\"%s\" target=\"_blank\" "
+"title=\"Перейдите на страницу аккаунта\">перейдите на страницу аккаунта </a>"
+" и проверьте его."
+
+#: inc/admin/ui/notices.php:78
+#, php-format
+msgid ""
+"There was a problem activating your license key, please try again or contact"
+" support. Error code: %s"
+msgstr ""
+"Ошибка активации вашего лицензионного ключа, пожалуйста, попробуйте снова "
+"или свяжитесь с поддержкой. Код ошибки: %s"
+
+#: inc/admin/ui/notices.php:82
+msgid "This license does not belong to the product you have entered it for."
+msgstr ""
+"Этот лицензионный ключ не принадлежит продукту, для которого вы его ввели."
+
+#: inc/admin/ui/notices.php:86
+#, php-format
+msgid ""
+"Your license key has reached its activation limit. <a href=\"%s\">View "
+"possible upgrades</a> now."
+msgstr ""
+"Для лицензионного ключа превышен лимит активаций. <a href=\"%s\">Просмотрите"
+" возможные обновления </a> прямо сейчас."
+
+#: inc/admin/ui/options.php:24
+msgid "License key"
+msgstr "Лицензионный ключ"
+
+#: inc/admin/ui/options.php:28
+msgid "Please enter your WPT transifex updater license key."
+msgstr "Пожалуйста, введите ваш лицензионный ключ от WPT transifex updater."
+
+#: inc/admin/ui/options.php:58
+msgid "transifex Account Information"
+msgstr "Информация аккаунта transifex"
+
+#: inc/admin/ui/options.php:65
+msgid "transifex Username"
+msgstr "Имя пользователя Transifex"
+
+#: inc/admin/ui/options.php:69
+msgid "Please enter your transifex username."
+msgstr "Пожалуйста, введите имя пользователя transifex."
+
+#: inc/admin/ui/options.php:74
+msgid "transifex Password"
+msgstr "Пароль transifex"
+
+#: inc/admin/ui/options.php:78
+msgid "Please enter your transifex password."
+msgstr "Пожалуйста, введите пароль transifex."
+
+#: inc/admin/ui/options.php:85
+msgid "Connected as:&nbsp;"
+msgstr "Подключен как:&nbsp;"
+
+#: inc/admin/ui/options.php:87
+msgid "Logout"
+msgstr "Выйти"
+
+#: inc/api/wptxu-sl-api.php:39
+#, php-format
+msgid ""
+"<p class=\"wptxu-error\"><span class=\"dashicons dashicons-"
+"info\"></span>There is a problem with remote site, please try again. %s</p>"
+msgstr ""
+"<p class=\"wptxu-error\"><span class=\"dashicons dashicons-"
+"info\"></span>Возникла проблема с удаленным сайтом, пожалуйста, попробуйте "
+"снова. %s</p>"
+
+#: inc/classes/wptxu-translation.php:48
+msgid "Translation folder created."
+msgstr "Папка с переводом создана."
+
+#: inc/classes/wptxu-translation.php:61
+msgid "Import po file on local filesystem."
+msgstr "Импортировать файл .po в локальную файловую систему."
+
+#: inc/classes/wptxu-translation.php:69
+msgid "Create mo file on local filesystem."
+msgstr "Создать файл .mo в локальной файловой системе."
+
+#: inc/classes/wptxu-translation.php:80
+msgid "Create readme file on local filesystem."
+msgstr "Создать файл readme в локальной файловой системе."
+
+#: inc/classes/wptxu-translation.php:92
+msgid "Translation is up to date!"
+msgstr "Перевод в актуальном состоянии!"
+
+#: inc/classes/wptxu-translation.php:97
+msgid "Translation update available!"
+msgstr "Доступно обновление перевода!"
+
+#: inc/classes/wptxu-translation.php:97
+msgid "Locale translation"
+msgstr "Языковой перевод"
+
+#: inc/classes/wptxu-translation.php:97
+msgid "transifex translation"
+msgstr "Перевод transifex"
+
+#: inc/classes/wptxu-updater.php:186
+#, php-format
+msgid ""
+"There is a new version of %1$s available. %2$sView version %3$s details%4$s."
+msgstr "Доступна свежая версия %1$s. %2$sПосмотреть детали версии %3$s %4$s."
+
+#: inc/classes/wptxu-updater.php:194
+#, php-format
+msgid ""
+"There is a new version of %1$s available. %2$sView version %3$s details%4$s "
+"or %5$supdate now%6$s."
+msgstr ""
+"Доступна свежая версия %1$s. %2$sПосмотреть детали версии %3$s s%4$s или "
+"%5$sобновиться прямо сейчас%6$s."
+
+#: inc/classes/wptxu-updater.php:336
+msgid "You do not have permission to install plugin updates"
+msgstr "У вас нет прав для установки обновлений плагина"
+
+#: inc/classes/wptxu-updater.php:336
+msgid "Error"
+msgstr "Ошибка"
+
+#: inc/common/admin-bar.php:29
+msgid "Settings"
+msgstr "Параметры"
+
+#: inc/common/admin-bar.php:62 inc/functions/functions.php:17
+msgid "Update translation"
+msgstr "Обновить перевод"
+
+#: inc/common/admin-bar.php:74
+msgid "Translation for:&nbsp;"
+msgstr "Переводы для:&nbsp;"
+
+#: inc/common/translation.php:18 inc/functions/license.php:15
+#: inc/functions/license.php:52
+msgid "Cheatin&#8217; uh?"
+msgstr "Хакер&#8217; что ли?"
+
+#: inc/functions/functions.php:23
+msgid "Please, first save your project."
+msgstr "Пожалуйста, сперва сохраните ваш проект."
+
+#: inc/functions/functions.php:39
+msgid "Project type:&nbsp;"
+msgstr "Тип проекта:&nbsp;"
+
+#: inc/functions/functions.php:42
+msgid "Plugins"
+msgstr "Плагины"
+
+#: inc/functions/functions.php:45
+msgid "Themes"
+msgstr "Темы"
+
+#: inc/functions/functions.php:50
+msgid "Custom .mo filename"
+msgstr "Пользовательский файл .mo"
+
+#. Plugin Name of the plugin/theme
+msgid "WPT transifex Updater"
+msgstr "WPT transifex Updater"
+
+#. Plugin URI of the plugin/theme
+#. Author URI of the plugin/theme
+msgid "http://wp-translations.org/"
+msgstr "http://wp-translations.org/"
+
+#. Description of the plugin/theme
+msgid "The easiest way to update translations from transifex with WordPress."
+msgstr "Самый простой способ обновить переводы из Transifex с WordPress."
+
+#. Author of the plugin/theme
+msgid "WP-Translations Team"
+msgstr "Комманда WP-Translations"
