@@ -29,11 +29,8 @@ function wptxu_update_translation() {
 	}
 
 	$lang_code = get_locale();
-	if ( 'de_DE_formal' === $lang_code ) {
-		$lang_code = 'de';
-	}
 
-		// Translations informations from transifex.org
+	// Translations informations from transifex.org
 	$project_tx = new WPTXU_Transifex_API( $project->post_name );
 	$project_tx_infos = $project_tx->_infos_details();
 
@@ -41,12 +38,11 @@ function wptxu_update_translation() {
 
 		 foreach ( $project_tx_infos->resources as $resource ) {
 
-			$project_tx_infos_lang = $project_tx->_infos_by_lang( $resource->slug, $lang_code );
-
-			$translation_content = $project_tx->get_translation( $resource->slug, $lang_code );
+			$lang_tx = apply_filters( 'wptxu_hack_transifex_locale', $lang_code );
+			$project_tx_infos_lang = $project_tx->_infos_by_lang( $resource->slug, $lang_tx );
+			$translation_content = $project_tx->get_translation( $resource->slug, $lang_tx );
 
 			$translation_to_po = new WPTXU_Translation( $project->ID, $project_tx_infos_lang, $resource->slug, $lang_code, $translation_content->content );
-
 			$translation_to_po = $translation_to_po->make_translation();
 
 		}
@@ -60,3 +56,17 @@ function wptxu_update_translation() {
 
 }
 add_action( 'wp_ajax_wptxu_update_translation', 'wptxu_update_translation' );
+
+/**
+ * Filter change locale de_DE_formal to de for transifex API call.
+ *
+ * @param  string $locale Current WP locale.
+ * @return string         Locale modified if needed
+ */
+function wptxu_hack_de_DE_formal_locale( $locale ) {
+	if ( 'de_DE_formal' === $locale )  {
+		$locale = 'de';
+	}
+	return $locale;
+}
+add_filter( 'wptxu_hack_transifex_locale', 'wptxu_hack_de_DE_formal_locale' );

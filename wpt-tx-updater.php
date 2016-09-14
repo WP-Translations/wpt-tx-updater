@@ -117,7 +117,7 @@ add_action( 'admin_init', 'wptxu_updater', 0 );
  *
  * @since 1.0.0
  */
-function wptxu_load_plugin_textdomain() {
+function wptxu_load_textdomain() {
 
 	if ( is_dir( WPTXU_CONTENT_PATH ) ) {
 
@@ -125,16 +125,14 @@ function wptxu_load_plugin_textdomain() {
 
 		foreach ( $domains as $domain ) {
 			$locale = apply_filters( 'plugin_locale', get_locale(), $domain );
-			if ( 'de_DE_formal' === $locale ) {
-				$locale = 'de';
-			}
+			
 			unload_textdomain( $domain );
 			load_textdomain( $domain,  WPTXU_CONTENT_PATH . '/' . $domain . '/' . $locale . '/' . $domain . '-' . $locale . '.mo' );
 		}
 	}
 
 }
-add_action( 'plugins_loaded', 'wptxu_load_plugin_textdomain', 0 );
+add_action( 'plugins_loaded', 'wptxu_load_textdomain', 0 );
 
 /*
  * Tell WP what to do when plugin is activated
