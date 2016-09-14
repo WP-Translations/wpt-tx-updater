@@ -1,4 +1,15 @@
 <?php
+/**
+ * View for admin notices.
+ *
+ * @author     WP-Translations Team
+ * @link       http://wp-translations.org
+ * @since      1.0.0
+ *
+ * @package    WPT_transifex_Updater
+ * @subpackage WPT_transifex_Updater/inc/admin/ui
+ */
+
 defined( 'ABSPATH' ) or die( 'Cheatin&#8217; uh?' );
 
 /**
@@ -12,10 +23,10 @@ function wptxu_empty_credentials() {
 	if ( ! get_the_author_meta( 'wptxu_transifex_auth', $user_id ) ) :
 
 	?>
-    <div class="notice notice-warning">
-        <p><?php _e( 'In order to use WPT transifex updater, please <a href="profile.php#wptxu-transifex-account">register your transifex credentials</a>. ', 'wpt-tx-updater' ); ?></p>
-    </div>
-    <?php endif;
+		<div class="notice notice-warning">
+				<p><?php _e( 'In order to use WPT transifex updater, please <a href="profile.php#wptxu-transifex-account">register your transifex credentials</a>. ', 'wpt-tx-updater' ); ?></p>
+		</div>
+		<?php endif;
 }
 
 /**
@@ -64,27 +75,27 @@ function wptxu_ajax_notices() {
 					__( 'Your license key expired. Please <a href="%s" target="_blank" title="Renew your license key">renew your license key</a>.', 'wpt-tx-updater' ),
 					WPTXU_STORE_URL.'/commander/?edd_license_key=' . $key
 				);
-		  break;
+			break;
 
 			case 'missing' :
 				$message = sprintf(
 					__( 'Invalid license. Please <a href="%s" target="_blank" title="Visit account page">visit your account page</a> and verify it.', 'wpt-tx-updater' ),
 					WPTXU_STORE_URL.'/votre-compte'
 				);
-		  break;
+			break;
 
 			case 'invalid' :
 			case 'site_inactive' :
 				$message = sprintf( __( 'There was a problem activating your license key, please try again or contact support. Error code: %s', 'wpt-tx-updater' ), $notice );
-		  break;
+			break;
 
 			case 'item_name_mismatch' :
 				$message = __( 'This license does not belong to the product you have entered it for.', 'wpt-tx-updater' );
-		  break;
+			break;
 
 			case 'no_activations_left':
 				$message = sprintf( __( 'Your license key has reached its activation limit. <a href="%s">View possible upgrades</a> now.', 'wpt-tx-updater' ), WPTXU_STORE_URL.'/votre-compte' );
-		  break;
+			break;
 
 		}
 

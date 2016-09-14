@@ -1,14 +1,19 @@
 <?php
+/**
+ * Allows plugins to use their own update API.
+ *
+ * @author     Pippin Williamson
+ * @link       https://easydigitaldownloads.com/downloads/software-licensing/
+ * @version 	 1.6.4
+ * @since      1.0.0
+ *
+ * @package    WPT_transifex_Updater
+ * @subpackage WPT_transifex_Updater/inc/classes
+ */
 
 // Exit if accessed directly
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 
-/**
- * Allows plugins to use their own update API.
- *
- * @author Pippin Williamson
- * @version 1.6.4
- */
 class WPTXU_Plugin_Updater {
 
 	private $api_url     = '';

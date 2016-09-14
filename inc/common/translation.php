@@ -1,4 +1,15 @@
 <?php
+/**
+ * AJAX functions for translations updates
+ *
+ * @author     WP-Translations Team
+ * @link       http://wp-translations.org
+ * @since      1.0.0
+ *
+ * @package    WPT_transifex_Updater
+ * @subpackage WPT_transifex_Updater/inc/common
+ */
+
 defined( 'ABSPATH' ) or die( 'Cheatin&#8217; uh?' );
 
 /**
@@ -6,7 +17,6 @@ defined( 'ABSPATH' ) or die( 'Cheatin&#8217; uh?' );
  *
  * @since 1.0.1
  */
-add_action( 'wp_ajax_wptxu_update_translation', 'wptxu_update_translation' );
 function wptxu_update_translation() {
 
 	$project = absint( $_POST['project'] );
@@ -49,3 +59,4 @@ function wptxu_update_translation() {
 	die();
 
 }
+add_action( 'wp_ajax_wptxu_update_translation', 'wptxu_update_translation' );

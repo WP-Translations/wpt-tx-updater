@@ -1,4 +1,15 @@
 <?php
+/**
+ * Admin bar functions for translations updates
+ *
+ * @author     WP-Translations Team
+ * @link       http://wp-translations.org
+ * @since      1.0.0
+ *
+ * @package    WPT_transifex_Updater
+ * @subpackage WPT_transifex_Updater/inc/common
+ */
+
 defined( 'ABSPATH' ) or die( 'Cheatin&#8217; uh?' );
 
 /**
@@ -6,7 +17,6 @@ defined( 'ABSPATH' ) or die( 'Cheatin&#8217; uh?' );
  *
  * @since 1.0.1
  */
-add_action( 'admin_bar_menu', 'wptxu_admin_bar', PHP_INT_MAX );
 function wptxu_admin_bar( $wp_admin_bar ) {
 
 	if ( ! current_user_can( 'manage_options' ) ) {
@@ -81,13 +91,13 @@ function wptxu_admin_bar( $wp_admin_bar ) {
 	}
 
 }
+add_action( 'admin_bar_menu', 'wptxu_admin_bar', PHP_INT_MAX );
 
 /**
  * Include Admin Bar styles in front
  *
  * @since  1.0.2
  */
-add_action( 'admin_bar_init', 'wptxu_admin_bar_styles' );
 function wptxu_admin_bar_styles() {
 
 	if ( ! is_admin() || is_admin_bar_showing() ) {
@@ -110,5 +120,5 @@ function wptxu_admin_bar_styles() {
 		) );
 
 	}
-
 }
+add_action( 'admin_bar_init', 'wptxu_admin_bar_styles' );

@@ -1,4 +1,15 @@
 <?php
+/**
+ * Translation creation process
+ *
+ * @author     WP-Translations Team
+ * @link       http:wp-translations.org
+ * @since      1.0.0
+ *
+ * @package    WPT_transifex_Updater
+ * @subpackage WPT_transifex_Updater/inc/classes
+ */
+
 defined( 'ABSPATH' ) or die( 'Cheatin&#8217; uh?' );
 
 use Gettext\Translations;
