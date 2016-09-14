@@ -11,6 +11,6 @@ function wptxu_metaboxes() {
 
 	add_meta_box( 'wptxu_tx_api_metaboxe', __( 'transifex API', 'wpt-tx-updater' ), 'wptxu_get_translation', 'wptxu-project', 'normal', 'high' );
 
-	add_meta_box( 'wptxu_project_meta_metaboxe', __( 'Project attributs', 'wpt-tx-updater' ), 'wptxu_project_attributs', 'wptxu-project', 'side', 'high' );
+	add_meta_box( 'wptxu_project_meta_metaboxe', __( 'Project attributes', 'wpt-tx-updater' ), 'wptxu_project_attributs', 'wptxu-project', 'side', 'high' );
 
 }

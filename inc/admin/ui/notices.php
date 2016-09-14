@@ -32,9 +32,9 @@ function wptxu_http_notices( $http_code ) {
 			break;
 
 		case '404':
-			$message = __( 'Project not found, check transifex and local project must have the same slug.', 'wpt-tx-updater' );
+			$message = __( 'Project not found: transifex and local project must have the same slug.', 'wpt-tx-updater' );
 			break;
-		
+
 	}
 
 	$notice = '<p class="wptxu-notice wptxu-error">';
@@ -88,7 +88,7 @@ function wptxu_ajax_notices() {
 
 		}
 
-		return print_r($notice);
+		return print_r( $notice );
 
 	}
 

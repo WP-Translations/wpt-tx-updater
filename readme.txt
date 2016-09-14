@@ -1,5 +1,5 @@
-=== WPT transifex updater ===
-Contributors: WP Translations Team
+=== WPT transifex Updater ===
+Contributors: WP-Translations Team
 Tags: i18n, Internationalization, transifex
 Requires at least: 3.7.0
 Tested up to: 4.5.2
@@ -9,18 +9,17 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
 
-Update translations from transifex.com
+Easily update translations from transifex.com
 
 == Changelog ==
 
 = 1.0.5 =
-* Change Custom Post Type logo
+* Changed Custom Post Type logo
 
 = 1.0.4 =
-* Integrate Software Licensing
-* Bugs Fix
- * Change option name for license key
-* Update .pot file
+* Integrated Software Licensing
+* Bug Fixed: Changed option name for license key
+* Updated .pot file
 
 = 1.0.3 =
-* Move translations folder outside the plugin
+* Moved translations folder outside the plugin

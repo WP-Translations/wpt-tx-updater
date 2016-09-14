@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: WP Transifex Updater\n"
-"POT-Creation-Date: 2016-06-16 10:08+0200\n"
+"POT-Creation-Date: 2016-06-20 17:05+0200\n"
 "PO-Revision-Date: 2016-06-09 09:53+0200\n"
 "Last-Translator: FX Bénard <fx@fxbenard.com>\n"
 "Language-Team: FX Bénard <fx@fxbenard.com>\n"
@@ -47,7 +47,7 @@ msgstr ""
 msgid "Parent Project:"
 msgstr ""
 
-#: inc/admin/custom-post-type.php:18 inc/common/admin-bar.php:38
+#: inc/admin/custom-post-type.php:18 inc/common/admin-bar.php:37
 msgid "All Projects"
 msgstr ""
 
@@ -59,7 +59,7 @@ msgstr ""
 msgid "Add New"
 msgstr ""
 
-#: inc/admin/custom-post-type.php:21 inc/common/admin-bar.php:46
+#: inc/admin/custom-post-type.php:21 inc/common/admin-bar.php:45
 msgid "New Project"
 msgstr ""
 
@@ -131,7 +131,7 @@ msgstr ""
 msgid "Post Type Description"
 msgstr ""
 
-#: inc/admin/enqueue.php:12 inc/common/admin-bar.php:99
+#: inc/admin/enqueue.php:12 inc/common/admin-bar.php:96
 msgid "Check for update..."
 msgstr ""
 
@@ -176,7 +176,7 @@ msgid "transifex API"
 msgstr ""
 
 #: inc/admin/ui/meta-boxes.php:14
-msgid "Project attributs"
+msgid "Project attributes"
 msgstr ""
 
 #: inc/admin/ui/notices.php:16
@@ -194,8 +194,7 @@ msgstr ""
 
 #: inc/admin/ui/notices.php:35
 msgid ""
-"Project not found, check transifex and local project must have the same "
-"slug."
+"Project not found: transifex and local project must have the same slug."
 msgstr ""
 
 #: inc/admin/ui/notices.php:64
@@ -239,7 +238,7 @@ msgid "Please enter your WPT transifex updater license key."
 msgstr ""
 
 #: inc/admin/ui/options.php:58
-msgid "transifex Account Informations"
+msgid "transifex Account Information"
 msgstr ""
 
 #: inc/admin/ui/options.php:65
@@ -319,23 +318,23 @@ msgid ""
 "%4$s or %5$supdate now%6$s."
 msgstr ""
 
-#: inc/classes/wptxu-updater.php:337
+#: inc/classes/wptxu-updater.php:336
 msgid "You do not have permission to install plugin updates"
 msgstr ""
 
-#: inc/classes/wptxu-updater.php:337
+#: inc/classes/wptxu-updater.php:336
 msgid "Error"
 msgstr ""
 
-#: inc/common/admin-bar.php:30
+#: inc/common/admin-bar.php:29
 msgid "Settings"
 msgstr ""
 
-#: inc/common/admin-bar.php:63 inc/functions/functions.php:17
+#: inc/common/admin-bar.php:62 inc/functions/functions.php:17
 msgid "Update translation"
 msgstr ""
 
-#: inc/common/admin-bar.php:76
+#: inc/common/admin-bar.php:74
 msgid "Translation for:&nbsp;"
 msgstr ""
 
@@ -365,7 +364,7 @@ msgid "Custom .mo filename"
 msgstr ""
 
 #. Plugin Name of the plugin/theme
-msgid "WP transifex updater"
+msgid "WPT transifex Updater"
 msgstr ""
 
 #. Plugin URI of the plugin/theme
@@ -374,9 +373,9 @@ msgid "http://wp-translations.org/"
 msgstr ""
 
 #. Description of the plugin/theme
-msgid "Update translations from Transifex."
+msgid "The easiest way to update translations from transifex with WordPress."
 msgstr ""
 
 #. Author of the plugin/theme
-msgid "WP-Translations"
+msgid "WP-Translations Team"
 msgstr ""

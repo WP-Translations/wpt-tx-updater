@@ -11,12 +11,12 @@ add_action( 'edit_user_profile', 'wptxu_extra_profile_fields' );
 
 function wptxu_extra_profile_fields( $user ) {
 
-    $license = get_option( 'wptxu_sl_key' );
-    $status  = get_option( 'wptxu_license_status' );
+	$license = get_option( 'wptxu_sl_key' );
+	$status  = get_option( 'wptxu_license_status' );
 
 	?>
 
-    <h2 id="wptxu-sl">WPT transifex updater</h2>
+    <h2 id="wptxu-sl">WPT transifex Updater</h2>
 
     <table class="form-table">
 
@@ -31,31 +31,31 @@ function wptxu_extra_profile_fields( $user ) {
         <tr>
             <th></th>
             <td id="wptxu-key-response">
-                
+
                 <?php
 
-                if ( false !== $license ) {
+				if ( false !== $license ) {
 
-                    if ( $status !== false && $status == 'valid' ) {
+					if ( $status !== false && $status == 'valid' ) {
 
-                        $license_data = get_transient( '_wptxu_license_data' );
-                        echo wptxu_action_remove_license( $license_data->expires );
+						$license_data = get_transient( '_wptxu_license_data' );
+						echo wptxu_action_remove_license( $license_data->expires );
 
-                    } elseif ( $status === false or $status != 'invalid' ) {
+					} elseif ( $status === false or $status != 'invalid' ) {
 
-                        echo wptxu_action_add_license();
+						echo wptxu_action_add_license();
 
-                    }
-                }
+					}
+				}
 
-                ?>
+				?>
 
             </td>
         </tr>
 
     </table>
 
-    <h2 id="wptxu-transifex-account"><?php _e( 'transifex Account Informations', 'wpt-tx-updater' ); ?></h2>
+    <h2 id="wptxu-transifex-account"><?php _e( 'transifex Account Information', 'wpt-tx-updater' ); ?></h2>
 
     <table class="form-table">
 

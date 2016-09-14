@@ -7,7 +7,6 @@ defined( 'ABSPATH' ) or die( 'Cheatin&#8217; uh?' );
  *
  * @since 1.0.0
  */
-
 add_action( 'personal_options_update', 'wptxu_save_extra_profile_fields' );
 add_action( 'edit_user_profile_update', 'wptxu_save_extra_profile_fields' );
 function wptxu_save_extra_profile_fields( $user_id ) {
