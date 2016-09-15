@@ -1,4 +1,15 @@
 <?php
+/**
+ * Translation creation process
+ *
+ * @author     WP-Translations Team
+ * @link       http:wp-translations.org
+ * @since      1.0.0
+ *
+ * @package    WPT_transifex_Updater
+ * @subpackage WPT_transifex_Updater/inc/classes
+ */
+
 defined( 'ABSPATH' ) or die( 'Cheatin&#8217; uh?' );
 
 use Gettext\Translations;
@@ -11,11 +22,10 @@ class WPTXU_Translation
 	private $mo_file_path;
 	private $filename;
 
-	public function __construct( $project_id, $tx_infos, $project_type, $text_domain, $lang_code, $content ) {
+	public function __construct( $project_id, $tx_infos, $text_domain, $lang_code, $content ) {
 
 		$this->project_id = $project_id;
 		$this->project = $tx_infos;
-		$this->project_type = $project_type;
 		$this->text_domain = $text_domain;
 		$this->lang_code = $lang_code;
 		$this->content = $content;
@@ -24,19 +34,9 @@ class WPTXU_Translation
 			$this->text_domain = get_post_meta( $this->project_id, 'wptxu_mo_filename', true );
 		}
 
-		if ( $this->project_type == 'plugins' ) {
-
-			$this->text_domain_path = WPTXU_CONTENT_PATH . '/' . $this->project_type . '/' . $this->text_domain . '/' . $this->lang_code . '/';
-			$this->po_file_path = $this->text_domain_path . $this->text_domain . '-' . $this->lang_code . '.po';
-			$this->mo_file_path = $this->text_domain_path . $this->text_domain . '-' . $this->lang_code . '.mo';
-
-		} else {
-
-			$this->text_domain_path = WPTXU_CONTENT_PATH . '/' . $this->project_type . '/' . $this->text_domain . '/' . $this->lang_code . '/';
-			$this->po_file_path = $this->text_domain_path . $this->lang_code . '.po';
-			$this->mo_file_path = $this->text_domain_path . $this->lang_code . '.mo';
-
-		}
+		$this->text_domain_path = WPTXU_CONTENT_PATH . '/' . $this->text_domain . '/' . $this->lang_code . '/';
+		$this->po_file_path = $this->text_domain_path . $this->text_domain . '-' . $this->lang_code . '.po';
+		$this->mo_file_path = $this->text_domain_path . $this->text_domain . '-' . $this->lang_code . '.mo';
 
 	}
 
@@ -46,7 +46,7 @@ class WPTXU_Translation
 		if ( ! is_dir( $this->text_domain_path ) ) {
 			wptxu_mkdir_p( $this->text_domain_path );
 			echo '<li class="wptxu-success">' . __( 'Translation folder created.', 'wpt-tx-updater' ) . '</li>';
-	    }
+			}
 
 		$this->_save_po_file();
 		$this->_create_mo_file();
@@ -65,8 +65,8 @@ class WPTXU_Translation
 	private function _create_mo_file() {
 
 		$file = Translations::fromPoFile( $this->po_file_path );
-	    $file->toMoFile( $this->mo_file_path );
-	    echo '<li class="wptxu-notice wptxu-success">'. __( 'Create mo file on local filesystem.', 'wpt-tx-updater' ) .'</li>';
+			$file->toMoFile( $this->mo_file_path );
+			echo '<li class="wptxu-notice wptxu-success">'. __( 'Create mo file on local filesystem.', 'wpt-tx-updater' ) .'</li>';
 	}
 
 	private function _create_readme_file() {

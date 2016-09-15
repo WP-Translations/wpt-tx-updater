@@ -1,4 +1,15 @@
 <?php
+/**
+ * Helper functions
+ *
+ * @author     WP-Translations Team
+ * @link       http://wp-translations.org
+ * @since      1.0.0
+ *
+ * @package    WPT_transifex_Updater
+ * @subpackage WPT_transifex_Updater/inc/functions
+ */
+
 defined( 'ABSPATH' ) or die( 'Cheatin&#8217; uh?' );
 
 /**
@@ -12,11 +23,11 @@ function wptxu_get_translation() {
 
 	if ( $post->post_status != 'auto-draft' ) :
 
-	 	$project = $post->post_name; ?>
-	 	<div id="wptxu-up-tx-<?php echo $post->ID; ?>" class="wptxu-project-infos" data-project="<?php echo $post->ID; ?>">
+		 $project = $post->post_name; ?>
+		 <div id="wptxu-up-tx-<?php echo $post->ID; ?>" class="wptxu-project-infos" data-project="<?php echo $post->ID; ?>">
 			<p><button type="button" class="button button-primary wptxu-update-tx" data-project="<?php echo $post->ID; ?>"><?php _e( 'Update translation', 'wpt-tx-updater' ); ?></button><span id="wptxu-spinner-post" class="spinner"></span></p>
 			<ul id="wptxu-post-response-<?php echo $post->ID; ?>" class="wptxu-response-list"></ul>
-        </div>
+				</div>
 
 	<?php else : ?>
 
@@ -32,26 +43,13 @@ function wptxu_get_translation() {
  * @since 1.0.1
  */
 function wptxu_project_attributs( $post ) {
-
-	$type = get_post_meta( $post->ID, 'wptxu_project_type', true ); ?>
-
-    <div id="wptxu-input-type">
-	<p><?php _e( 'Project type:&nbsp;', 'wpt-tx-updater' ); ?></p>
-        <div>
-			<input id="wptxu-type-plugins" type="radio" name="wptxu-project-type" value="plugins" <?php checked( $type, 'plugins' ); ?>>
-			<label for="wptxu-type-plugins"><?php _e( 'Plugins', 'wpt-tx-updater' ); ?></label><br>
-
-			<input id="wptxu-type-themes" type="radio" name="wptxu-project-type" value="themes"<?php checked( $type, 'themes' ); ?>>
-			<label for="wptxu-type-themes"><?php _e( 'Themes', 'wpt-tx-updater' ); ?></label>
-        </div>
-    </div>
-
-    <div id="wptxu-input-filename">
+ ?>
+		<div id="wptxu-input-filename">
 		<label for="wptxu-mo-filename"><?php _e( 'Custom .mo filename', 'wpt-tx-updater' ); ?></label>
 		<input id="wptxu-mo-filename" type="text" name="wptxu-mo-filename" value="<?php echo get_post_meta( $post->ID, 'wptxu_mo_filename', true ); ?>">
-            <br>
-    </div>
- 	<?php
+						<br>
+		</div>
+	 <?php
 }
 
 /**
@@ -59,15 +57,12 @@ function wptxu_project_attributs( $post ) {
  *
  * @since 1.0.1
  */
-	add_action( 'save_post_wptxu-project', 'wptxu_project_attributs_save', 10, 3 );
 function wptxu_project_attributs_save( $post_id, $post, $update ) {
-	if ( isset( $_REQUEST['wptxu-project-type'] ) ) {
-		update_post_meta( $post_id, 'wptxu_project_type', sanitize_text_field( $_REQUEST['wptxu-project-type'] ) );
-	}
 	if ( isset( $_REQUEST['wptxu-mo-filename'] ) ) {
 		update_post_meta( $post_id, 'wptxu_mo_filename', sanitize_text_field( $_REQUEST['wptxu-mo-filename'] ) );
 	}
 }
+add_action( 'save_post_wptxu-project', 'wptxu_project_attributs_save', 10, 3 );
 
 /**
  * Get state code

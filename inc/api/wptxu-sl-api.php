@@ -1,4 +1,15 @@
 <?php
+/**
+ * Classe to communicate with the Software Licensing API
+ *
+ * @author     WP-Translations Team
+ * @link       http:wp-translations.org
+ * @since      1.0.0
+ *
+ * @package    WPT_transifex_Updater
+ * @subpackage WPT_transifex_Updater/inc/api
+ */
+
 defined( 'ABSPATH' ) or die( 'Cheatin&#8217; uh?' );
 
 /**
@@ -26,9 +37,9 @@ function wptxu_sl_call( $action, $key ) {
 	}
 
 	$args = array(
-	  'timeout'   => 30,
-	  'sslverify' => false,
-	  'body'      => $api_params,
+		'timeout'   => 30,
+		'sslverify' => false,
+		'body'      => $api_params,
 	);
 
 	// Call the custom API.

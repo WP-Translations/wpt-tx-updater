@@ -1,4 +1,15 @@
 <?php
+/**
+ * Register the stylesheets and scripts for the admin area.
+ *
+ * @author     WP-Translations Team
+ * @link       http://wp-translations.org
+ * @since      1.0.0
+ *
+ * @package    WPT_transifex_Updater
+ * @subpackage WPT_transifex_Updater/inc/admin
+ */
+
 defined( 'ABSPATH' ) or die( 'Cheatin&#8217; uh?' );
 
 /**
@@ -18,9 +29,7 @@ function wptxu_load_admin_assets() {
 	wp_enqueue_style( 'wptxu-styles' );
 	wp_register_style( 'wptxu-flags', WPTXU_URL_ASSETS_CSS . 'flag-icon.min.css' );
 	wp_enqueue_style( 'wptxu-flags' );
-
 	wp_enqueue_script( 'wptxu-script', WPTXU_URL_ASSETS_JS . 'script.js', array( 'jquery' ), '1.0.0', false );
-
 	wp_localize_script( 'wptxu-script', 'wptxu_ajax', array(
 		'ajaxurl' => admin_url( 'admin-ajax.php' ),
 		'ajax_loading' => $translation_array,

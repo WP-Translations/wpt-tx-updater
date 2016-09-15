@@ -1,4 +1,15 @@
 <?php
+/**
+* Provide a admin area view for the plugin.
+ *
+ * @author     WP-Translations Team
+ * @link       http://wp-translations.org
+ * @since      1.0.0
+ *
+ * @package    WPT_transifex_Updater
+ * @subpackage WPT_transifex_Updater/inc/admin/ui
+ */
+
 defined( 'ABSPATH' ) or die( 'Cheatin&#8217; uh?' );
 
 /**
@@ -16,23 +27,23 @@ function wptxu_extra_profile_fields( $user ) {
 
 	?>
 
-    <h2 id="wptxu-sl">WPT transifex Updater</h2>
+		<h2 id="wptxu-sl">WPT transifex Updater</h2>
 
-    <table class="form-table">
+		<table class="form-table">
 
-        <tr>
-            <th><label for="wptxu-sl-key"><?php _e( 'License key', 'wpt-tx-updater' ); ?></label></th>
+				<tr>
+						<th><label for="wptxu-sl-key"><?php _e( 'License key', 'wpt-tx-updater' ); ?></label></th>
 
-            <td>
-                <input type="password" name="wptxu-sl-key" id="wptxu-sl-key" value="<?php echo $license; ?>" class="regular-text" /><br />
-                <span class="description"><?php _e( 'Please enter your WPT transifex updater license key.', 'wpt-tx-updater' ); ?></span>
-            </td>
-        </tr>
-        <tr>
-            <th></th>
-            <td id="wptxu-key-response">
+						<td>
+								<input type="password" name="wptxu-sl-key" id="wptxu-sl-key" value="<?php echo $license; ?>" class="regular-text" /><br />
+								<span class="description"><?php _e( 'Please enter your WPT transifex updater license key.', 'wpt-tx-updater' ); ?></span>
+						</td>
+				</tr>
+				<tr>
+						<th></th>
+						<td id="wptxu-key-response">
 
-                <?php
+								<?php
 
 				if ( false !== $license ) {
 
@@ -50,44 +61,44 @@ function wptxu_extra_profile_fields( $user ) {
 
 				?>
 
-            </td>
-        </tr>
+						</td>
+				</tr>
 
-    </table>
+		</table>
 
-    <h2 id="wptxu-transifex-account"><?php _e( 'transifex Account Information', 'wpt-tx-updater' ); ?></h2>
+		<h2 id="wptxu-transifex-account"><?php _e( 'transifex Account Information', 'wpt-tx-updater' ); ?></h2>
 
-    <table class="form-table">
+		<table class="form-table">
 
-    <?php if ( ! get_the_author_meta( 'wptxu_transifex_auth', $user->ID ) ) : ?>
+		<?php if ( ! get_the_author_meta( 'wptxu_transifex_auth', $user->ID ) ) : ?>
 
-        <tr>
-            <th><label for="wptxu-tx-username"><?php _e( 'transifex Username', 'wpt-tx-updater' ); ?></label></th>
+				<tr>
+						<th><label for="wptxu-tx-username"><?php _e( 'transifex Username', 'wpt-tx-updater' ); ?></label></th>
 
-            <td>
-                <input type="text" name="wptxu-tx-username" id="wptxu-tx-username" value="<?php echo esc_attr( get_the_author_meta( 'wptxu-tx-username', $user->ID ) ); ?>" class="regular-text" /><br />
-                <span class="description"><?php _e( 'Please enter your transifex username.', 'wpt-tx-updater' ); ?></span>
-            </td>
-        </tr>
+						<td>
+								<input type="text" name="wptxu-tx-username" id="wptxu-tx-username" value="<?php echo esc_attr( get_the_author_meta( 'wptxu-tx-username', $user->ID ) ); ?>" class="regular-text" /><br />
+								<span class="description"><?php _e( 'Please enter your transifex username.', 'wpt-tx-updater' ); ?></span>
+						</td>
+				</tr>
 
-        <tr>
-            <th><label for="wptxu-tx-password"><?php _e( 'transifex Password', 'wpt-tx-updater' ); ?></label></th>
+				<tr>
+						<th><label for="wptxu-tx-password"><?php _e( 'transifex Password', 'wpt-tx-updater' ); ?></label></th>
 
-            <td>
-                <input type="password" name="wptxu-tx-password" id="wptxu-tx-password" value="<?php echo esc_attr( get_the_author_meta( 'wptxu-tx-password', $user->ID ) ); ?>" class="regular-text" /><br />
-                <span class="description"><?php _e( 'Please enter your transifex password.', 'wpt-tx-updater' ); ?></span>
-            </td>
-        </tr>
+						<td>
+								<input type="password" name="wptxu-tx-password" id="wptxu-tx-password" value="<?php echo esc_attr( get_the_author_meta( 'wptxu-tx-password', $user->ID ) ); ?>" class="regular-text" /><br />
+								<span class="description"><?php _e( 'Please enter your transifex password.', 'wpt-tx-updater' ); ?></span>
+						</td>
+				</tr>
 
-    <?php else : ?>
+		<?php else : ?>
 
-        <tr>
-            <th><?php _e( 'Connected as:&nbsp;', 'wpt-tx-updater' );?></th>
-            <td><?php echo get_the_author_meta( 'wptxu_transifex_user', $user->ID ); ?><input type="hidden" name="wptxu-tx-username" value="<?php echo get_the_author_meta( 'wptxu_transifex_user', $user->ID ); ?>"></td>
-            <td> <button type="submit" value="wptxu-tx-loggout" name="wptxu-tx-loggout" class="button button-secondary"><?php _e( 'Logout', 'wpt-tx-updater' ); ?></button></td>
-        </tr>
+				<tr>
+						<th><?php _e( 'Connected as:&nbsp;', 'wpt-tx-updater' );?></th>
+						<td><?php echo get_the_author_meta( 'wptxu_transifex_user', $user->ID ); ?><input type="hidden" name="wptxu-tx-username" value="<?php echo get_the_author_meta( 'wptxu_transifex_user', $user->ID ); ?>"></td>
+						<td> <button type="submit" value="wptxu-tx-loggout" name="wptxu-tx-loggout" class="button button-secondary"><?php _e( 'Logout', 'wpt-tx-updater' ); ?></button></td>
+				</tr>
 
 	<?php endif; ?>
 
-    </table>
+		</table>
 <?php }

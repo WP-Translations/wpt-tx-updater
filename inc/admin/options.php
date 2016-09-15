@@ -1,15 +1,22 @@
 <?php
-defined( 'ABSPATH' ) or die( 'Cheatin&#8217; uh?' );
+/**
+ * The admin-specific functionality of the plugin.
+ *
+ * @author     WP-Translations Team
+ * @link       http://wp-translations.org
+ * @since      1.0.0
+ *
+ * @package    WPT_transifex_Updater
+ * @subpackage WPT_transifex_Updater/inc/admin
+ */
 
+defined( 'ABSPATH' ) or die( 'Cheatin&#8217; uh?' );
 
 /**
  * Save transifex user and base64 auth
  *
  * @since 1.0.0
  */
-
-add_action( 'personal_options_update', 'wptxu_save_extra_profile_fields' );
-add_action( 'edit_user_profile_update', 'wptxu_save_extra_profile_fields' );
 function wptxu_save_extra_profile_fields( $user_id ) {
 
 	if ( ! current_user_can( 'edit_user', $user_id ) ) {
@@ -37,3 +44,5 @@ function wptxu_save_extra_profile_fields( $user_id ) {
 	}
 
 }
+add_action( 'personal_options_update', 'wptxu_save_extra_profile_fields' );
+add_action( 'edit_user_profile_update', 'wptxu_save_extra_profile_fields' );

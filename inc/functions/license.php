@@ -1,4 +1,15 @@
 <?php
+/**
+ * Helper functions for Software Licensing
+ *
+ * @author     WP-Translations Team
+ * @link       http://wp-translations.org
+ * @since      1.0.0
+ *
+ * @package    WPT_transifex_Updater
+ * @subpackage WPT_transifex_Updater/inc/functions
+ */
+
 defined( 'ABSPATH' ) or die( 'Cheatin&#8217; uh?' );
 
 /**
@@ -21,7 +32,7 @@ function wptxu_activate_license() {
 
 	if ( $license_data->license == 'valid' ) {
 
-	    set_transient( '_wptxu_license_data', $license_data, DAY_IN_SECONDS );
+			set_transient( '_wptxu_license_data', $license_data, DAY_IN_SECONDS );
 		delete_transient( '_wptxu_license_error' );
 		echo wptxu_action_remove_license( $license_data->expires );
 

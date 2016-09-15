@@ -1,4 +1,15 @@
 <?php
+/**
+ * View for activate / deactivate buttons.
+ *
+ * @author     WP-Translations Team
+ * @link       http://wp-translations.org
+ * @since      1.0.0
+ *
+ * @package    WPT_transifex_Updater
+ * @subpackage WPT_transifex_Updater/inc/admin/ui
+ */
+
 defined( 'ABSPATH' ) or die( 'Cheatin&#8217; uh?' );
 
 /**
@@ -40,10 +51,10 @@ function wptxu_action_remove_license( $expires ) {
 	}
 
 	?>
-    <div class="wptxu-license-information">
+		<div class="wptxu-license-information">
 		<div><span class="wptxu-success dashicons dashicons-yes"></span> <?php _e( 'License active', 'wpt-tx-updater' ); ?></div>
 		<div><span class="dashicons dashicons-backup"></span> <?php echo $expiration_message; ?></strong></div>
 		<div><button type="button" id="wptxu_license_deactivate" class="button-secondary"><span class="wptxu-vam dashicons dashicons-no"></span> <?php _e( 'Deactivate License', 'wpt-tx-updater' ); ?></button><span id="wptxu-spinner-key" class="spinner"></span></div>
-    </div>
+		</div>
 
 <?php }
