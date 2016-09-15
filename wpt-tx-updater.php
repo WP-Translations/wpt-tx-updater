@@ -1,25 +1,25 @@
- <?php
- /**
-	* WPT transifex Updater
-	*
-	* @package     WPT_transifex_Updater
-	* @author      WP-Translations Team
-	* @link        https://github.com/WP-Translations/wpt-tx-updater
-	*
-	* @copyright   2016 WP-Translations Team
-	* @license     http://creativecommons.org/licenses/GPL/2.0/ GNU General Public License, version 2 or higher
-	*
-	* @wordpress-plugin
-	* Plugin Name:  WPT transifex Updater
-	* Plugin URI:  http://wp-translations.org/
-	* Description: Easily update translations from transifex.com
-	* Version:     1.0.6
-	* Author:      WP-Translations Team
-	* Author URI:  http://wp-translations.org/
-	* Text Domain: wpt-tx-updater
-	* Domain Path: /languages
-	* Copyright:   2016 WP-Translations Team
-	*/
+<?php
+	/**
+	 * WPT transifex Updater
+	 *
+	 * @package     WPT_transifex_Updater
+	 * @author      WP-Translations Team
+	 * @link        https://github.com/WP-Translations/wpt-tx-updater
+	 *
+	 * @copyright   2016 WP-Translations Team
+	 * @license     http://creativecommons.org/licenses/GPL/2.0/ GNU General Public License, version 2 or higher
+	 *
+	 * @wordpress-plugin
+	 * Plugin Name:  WPT transifex Updater
+	 * Plugin URI:  http://wp-translations.org/
+	 * Description: Easily update translations from transifex.com
+	 * Version:     1.0.6
+	 * Author:      WP-Translations Team
+	 * Author URI:  http://wp-translations.org/
+	 * Text Domain: wpt-tx-updater
+	 * Domain Path: /languages
+	 * Copyright:   2016 WP-Translations Team
+	 */
 
 defined( 'ABSPATH' ) or die( 'Cheatin&#8217; uh?' );
 
@@ -52,11 +52,11 @@ define( 'WPTXU_CONTENT_PATH', 	WP_CONTENT_DIR . '/wpt-tx-updater' );
  */
 function wptxu_init() {
 
-	// Load translations.
-	load_plugin_textdomain( 'wpt-tx-updater', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
+	 // Load translations.
+	 load_plugin_textdomain( 'wpt-tx-updater', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
 
-	require( WPTXU_FUNCTIONS_PATH . 'functions.php' );
-	require( WPTXU_COMMON_PATH . 'admin-bar.php' );
+	 require( WPTXU_FUNCTIONS_PATH . 'functions.php' );
+	 require( WPTXU_COMMON_PATH . 'admin-bar.php' );
 
 	if ( is_admin() ) {
 
@@ -64,19 +64,19 @@ function wptxu_init() {
 			include( WPTXU_CLASSES_PATH . '/wptxu-updater.php' );
 		}
 
-		require( WPTXU_ADMIN_PATH . 'enqueue.php' );
-		require( WPTXU_FUNCTIONS_PATH . 'files.php' );
-		require( WPTXU_FUNCTIONS_PATH . 'license.php' );
-		require( WPTXU_ADMIN_PATH . 'options.php' );
-		require( WPTXU_ADMIN_UI_PATH . 'options.php' );
-		require( WPTXU_ADMIN_UI_PATH . 'actions.php' );
-		require( WPTXU_ADMIN_PATH . 'custom-post-type.php' );
-		require( WPTXU_ADMIN_UI_PATH . 'meta-boxes.php' );
-		require( WPTXU_ADMIN_UI_PATH . 'notices.php' );
-		require( WPTXU_COMMON_PATH . 'translation.php' );
-		require( WPTXU_API_PATH . 'wptxu-sl-api.php' );
-		require( WPTXU_API_PATH . 'wptxu-transifex-api.php' );
-		require( WPTXU_CLASSES_PATH . 'wptxu-translation.php' );
+		   require( WPTXU_ADMIN_PATH . 'enqueue.php' );
+		   require( WPTXU_FUNCTIONS_PATH . 'files.php' );
+		   require( WPTXU_FUNCTIONS_PATH . 'license.php' );
+		   require( WPTXU_ADMIN_PATH . 'options.php' );
+		   require( WPTXU_ADMIN_UI_PATH . 'options.php' );
+		   require( WPTXU_ADMIN_UI_PATH . 'actions.php' );
+		   require( WPTXU_ADMIN_PATH . 'custom-post-type.php' );
+		   require( WPTXU_ADMIN_UI_PATH . 'meta-boxes.php' );
+		   require( WPTXU_ADMIN_UI_PATH . 'notices.php' );
+		   require( WPTXU_COMMON_PATH . 'translation.php' );
+		   require( WPTXU_API_PATH . 'wptxu-sl-api.php' );
+		   require( WPTXU_API_PATH . 'wptxu-transifex-api.php' );
+		   require( WPTXU_CLASSES_PATH . 'wptxu-translation.php' );
 
 		if ( ! class_exists( 'Translation' ) ) {
 			require( WPTXU_LIBS_PATH . 'gettext/src/autoloader.php' );
@@ -89,33 +89,33 @@ function wptxu_init() {
 	}
 
 }
-add_action( 'plugins_loaded', 'wptxu_init' );
+	add_action( 'plugins_loaded', 'wptxu_init' );
 
-/**
- * Setup the updater
- *
- * @since 1.0.4
- */
+	/**
+	 * Setup the updater
+	 *
+	 * @since 1.0.4
+	 */
 function wptxu_updater() {
 
-		$license_key = trim( get_option( 'wptxu_sl_key' ) );
+	$license_key = trim( get_option( 'wptxu_sl_key' ) );
 
-		$edd_updater = new WPTXU_Plugin_Updater( WPTXU_STORE_URL, __FILE__, array(
-			'version' 	=> WPTXU_VERSION,
-			'license' 	=> $license_key,
-			'item_name' => WPTXU_SLUG,
-			'author' 		=> 'WP-Translations Team',
-			)
-		);
+	$edd_updater = new WPTXU_Plugin_Updater( WPTXU_STORE_URL, __FILE__, array(
+		'version' 	=> WPTXU_VERSION,
+		'license' 	=> $license_key,
+		'item_name' => WPTXU_SLUG,
+		'author' 		=> 'WP-Translations Team',
+		)
+	);
 
 }
-add_action( 'admin_init', 'wptxu_updater', 0 );
+	add_action( 'admin_init', 'wptxu_updater', 0 );
 
-/**
- * Load plugin textdomain
- *
- * @since 1.0.0
- */
+	/**
+	 * Load plugin textdomain
+	 *
+	 * @since 1.0.0
+	 */
 function wptxu_load_textdomain() {
 
 	if ( is_dir( WPTXU_CONTENT_PATH ) ) {
@@ -131,27 +131,27 @@ function wptxu_load_textdomain() {
 	}
 
 }
-add_action( 'plugins_loaded', 'wptxu_load_textdomain', 0 );
+	add_action( 'plugins_loaded', 'wptxu_load_textdomain', 0 );
 
-/*
- * Tell WP what to do when plugin is activated
- *
- * @since 1.0.0
- */
+	/**
+	 * Tell WP what to do when plugin is activated
+	 *
+	 * @since 1.0.0
+	 */
 function wptxu_activation() {
 
 	require( WPTXU_ADMIN_PATH . 'custom-post-type.php' );
 	flush_rewrite_rules();
 
 }
-register_activation_hook( __FILE__, 'wptxu_activation' );
+	register_activation_hook( __FILE__, 'wptxu_activation' );
 
-/*
- * Tell WP what to do when plugin is deactivated
- *
- * @since 1.0.0
- */
+	/**
+	 * Tell WP what to do when plugin is deactivated
+	 *
+	 * @since 1.0.0
+	 */
 function wptxu_deactivate() {
 	flush_rewrite_rules();
 }
-register_deactivation_hook( __FILE__, 'wptxu_deactivate' );
+	register_deactivation_hook( __FILE__, 'wptxu_deactivate' );
