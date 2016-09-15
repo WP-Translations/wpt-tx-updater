@@ -12,8 +12,7 @@
 	* @wordpress-plugin
 	* Plugin Name:  WPT transifex Updater
 	* Plugin URI:  http://wp-translations.org/
-	* Description: A powerful WordPress plugin that let you use your own translation .mo files. Simple as that.
-
+	* Description: Easily update translations from transifex.com
 	* Version:     1.0.6
 	* Author:      WP-Translations Team
 	* Author URI:  http://wp-translations.org/
@@ -24,7 +23,7 @@
 
 defined( 'ABSPATH' ) or die( 'Cheatin&#8217; uh?' );
 
-define( 'WPTXU_VERSION', 				'1.0.5' );
+define( 'WPTXU_VERSION', 				'1.0.6' );
 define( 'WPTXU_STORE_URL', 			'http://sadler-jerome.fr' );
 define( 'WPTXU_SLUG', 					'wpt-tx-updater' );
 define( 'WPTXU_NICE_NAME', 			'WPT transifex Updater' );
@@ -125,7 +124,7 @@ function wptxu_load_textdomain() {
 
 		foreach ( $domains as $domain ) {
 			$locale = apply_filters( 'plugin_locale', get_locale(), $domain );
-			
+
 			unload_textdomain( $domain );
 			load_textdomain( $domain,  WPTXU_CONTENT_PATH . '/' . $domain . '/' . $locale . '/' . $domain . '-' . $locale . '.mo' );
 		}
