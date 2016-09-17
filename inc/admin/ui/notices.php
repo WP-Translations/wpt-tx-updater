@@ -17,7 +17,6 @@ defined( 'ABSPATH' ) or die( 'Cheatin&#8217; uh?' );
  *
  * @since 1.0.1
  */
-add_action( 'all_admin_notices', 'wptxu_empty_credentials' );
 function wptxu_empty_credentials() {
 	$user_id = get_current_user_id();
 	if ( ! get_the_author_meta( 'wptxu_transifex_auth', $user_id ) ) :
@@ -28,6 +27,7 @@ function wptxu_empty_credentials() {
 		</div>
 		<?php endif;
 }
+add_action( 'all_admin_notices', 'wptxu_empty_credentials' );
 
 /**
  * Return http error with message
@@ -43,7 +43,7 @@ function wptxu_http_notices( $http_code ) {
 			break;
 
 		case '404':
-			$message = __( 'Project not found: transifex and local project must have the same slug.', 'wpt-tx-updater' );
+		$message = __( 'Project not found: transifex and local project must have the same slug. Or this language doesn\'t exist on transifex.', 'wpt-tx-updater' );
 			break;
 
 	}
@@ -63,8 +63,8 @@ function wptxu_http_notices( $http_code ) {
  */
 function wptxu_ajax_notices() {
 
-	$notice = get_transient( '_wptxu_license_error' );
-	$key = get_option( 'wptxu_sl_key' );
+	$notice = get_transient( 'wptxu_license_error' );
+	$key = get_option( 'wptxu_license_key' );
 
 	if ( $notice !== false ) {
 
@@ -99,7 +99,7 @@ function wptxu_ajax_notices() {
 
 		}
 
-		return print_r( $notice );
+		return $message;
 
 	}
 

@@ -33,8 +33,8 @@ function wptxu_save_extra_profile_fields( $user_id ) {
 
 		if ( $old && $old != $new ) {
 			delete_option( 'wptxu_license_status' );
-			delete_transient( '_wptxu_license_data' );
-			delete_transient( '_wptxu_license_error' );
+			delete_transient( 'wptxu_license_data' );
+			delete_transient( 'wptxu_license_error' );
 		}
 
 		update_usermeta( absint( $user_id ), 'wptxu_transifex_auth', base64_encode( $_POST['wptxu-tx-username'] . ':' . $_POST['wptxu-tx-password'] ) );

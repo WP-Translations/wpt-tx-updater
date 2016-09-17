@@ -3,7 +3,7 @@ Contributors: WP-Translations Team
 Tags: i18n, Internationalization, transifex
 Requires at least: 4.1
 Tested up to: 4.6.1
-Stable tag: 1.0.6
+Stable tag: 1.0.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -12,6 +12,10 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Easily update translations from transifex.com
 
 == Changelog ==
+
+=1.0.7 =
+* Bug Fixed : Activate license sometimes broken
+* Bug Fixed : Plugin Updater doesn t find zip archive
 
 =1.0.6 =
 * Code revamping

@@ -19,11 +19,11 @@ delete_metadata( 'user', '', 'wptxu_transifex_user', '', true );
 delete_metadata( 'post', '', 'wptxu_mo_filename', '', true );
 
 // Delete plugin transients.
-delete_transient( '_wptxu_license_data' );
-delete_transient( '_wptxu_license_error' );
+delete_transient( 'wptxu_license_data' );
+delete_transient( 'wptxu_license_error' );
 
 // Delete plugin options.
-delete_option( 'wptxu_sl_key' );
+delete_option( 'wptxu_license_key' );
 delete_option( 'wptxu_license_status' );
 
 /**
