@@ -32,8 +32,8 @@ function wptxu_action_add_license() {
 function wptxu_action_remove_license( $expires ) {
 	$now        = current_time( 'timestamp' );
 	$expiration = strtotime( $expires, current_time( 'timestamp' ) );
-	$key = get_option( 'wptxu-sl-key' );
-	$license = get_transient( '_wptxu_license_data' );
+	$key = get_option( 'wptxu_license_key' );
+	$license = get_transient( 'wptxu_license_data' );
 
 	if ( 'lifetime' === $expires ) {
 		$expiration_message = __( 'License key never expires.', 'wpt-tx-updater' );
@@ -52,9 +52,9 @@ function wptxu_action_remove_license( $expires ) {
 
 	?>
 		<div class="wptxu-license-information">
-		<div><span class="wptxu-success dashicons dashicons-yes"></span> <?php _e( 'License active', 'wpt-tx-updater' ); ?></div>
-		<div><span class="dashicons dashicons-backup"></span> <?php echo $expiration_message; ?></strong></div>
-		<div><button type="button" id="wptxu_license_deactivate" class="button-secondary"><span class="wptxu-vam dashicons dashicons-no"></span> <?php _e( 'Deactivate License', 'wpt-tx-updater' ); ?></button><span id="wptxu-spinner-key" class="spinner"></span></div>
+			<div><span class="wptxu-success dashicons dashicons-yes"></span> <?php _e( 'License active', 'wpt-tx-updater' ); ?></div>
+			<div><span class="dashicons dashicons-backup"></span> <?php echo $expiration_message; ?></strong></div>
+			<div><button type="button" id="wptxu_license_deactivate" class="button-secondary"><span class="wptxu-vam dashicons dashicons-no"></span> <?php _e( 'Deactivate License', 'wpt-tx-updater' ); ?></button><span id="wptxu-spinner-key" class="spinner"></span></div>
 		</div>
 
 <?php }

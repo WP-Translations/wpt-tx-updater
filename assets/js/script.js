@@ -32,12 +32,15 @@ jQuery(document).ready(function($) {
 	$('#wptxu_license_activate').live( "click", function(e) {
 		e.preventDefault();
 
+		var sl_key = $('#wptxu-sl-key').val();
+
 		$.ajax({
 			type: "POST",
 			url: wptxu_ajax.ajaxurl,
 			data: {
 				'action': 'wptxu_activate_license',
 				'wptxu_nonce': wptxu_ajax.wptxu_nonce,
+				'wptxu_sl_key': sl_key,
 			},
 			beforeSend: function(reponse) {
 				$('#wptxu-spinner-key').addClass('is-active');

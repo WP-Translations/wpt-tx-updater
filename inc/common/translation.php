@@ -40,11 +40,15 @@ function wptxu_update_translation() {
 
 			$lang_tx = apply_filters( 'wptxu_hack_transifex_locale', $lang_code );
 			$project_tx_infos_lang = $project_tx->_infos_by_lang( $resource->slug, $lang_tx );
-			$translation_content = $project_tx->get_translation( $resource->slug, $lang_tx );
 
-			$translation_to_po = new WPTXU_Translation( $project->ID, $project_tx_infos_lang, $resource->slug, $lang_code, $translation_content->content );
-			$translation_to_po = $translation_to_po->make_translation();
+			if ( is_object( $project_tx_infos_lang ) ) {
+				$translation_content = $project_tx->get_translation( $resource->slug, $lang_tx );
 
+				$translation_to_po = new WPTXU_Translation( $project->ID, $project_tx_infos_lang, $resource->slug, $lang_code, $translation_content->content );
+				$translation_to_po = $translation_to_po->make_translation();
+			} else {
+				echo wptxu_http_notices( $project_tx_infos_lang );
+			}
 		}
 	} else {
 
