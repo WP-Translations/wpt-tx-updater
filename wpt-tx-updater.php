@@ -10,7 +10,7 @@
  * @license     http://creativecommons.org/licenses/GPL/2.0/ GNU General Public License, version 2 or higher
  *
  * @wordpress-plugin
- * Plugin Name:  WPT Transifex Updater
+ * Plugin Name:  WPT transifex Updater
  * Plugin URI:  http://wp-translations.org/
  * Description: Easily update translations from transifex.com
  * Version:     1.0.7

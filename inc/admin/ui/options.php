@@ -28,7 +28,7 @@ function wptxu_extra_profile_fields( $user ) {
 						<th><label for="wptxu-sl-key"><?php _e( 'License key', 'wpt-tx-updater' ); ?></label></th>
 						<td>
 								<input type="password" name="wptxu-sl-key" id="wptxu-sl-key" value="<?php echo $license; ?>" class="regular-text" /><br />
-								<span class="description"><?php _e( 'Please enter your WPT Transifex Updater license key.', 'wpt-tx-updater' ); ?></span>
+								<span class="description"><?php _e( 'Please enter your WPT transifex updater license key.', 'wpt-tx-updater' ); ?></span>
 						</td>
 				</tr>
 				<tr>
@@ -47,23 +47,23 @@ function wptxu_extra_profile_fields( $user ) {
 
 		</table>
 
-		<h2 id="wptxu-transifex-account"><?php _e( 'Transifex Account Information', 'wpt-tx-updater' ); ?></h2>
+		<h2 id="wptxu-transifex-account"><?php _e( 'transifex Account Information', 'wpt-tx-updater' ); ?></h2>
 		<table class="form-table">
 
 		<?php if ( ! get_the_author_meta( 'wptxu_transifex_auth', $user->ID ) ) : ?>
 
 				<tr>
-						<th><label for="wptxu-tx-username"><?php _e( 'Transifex Username', 'wpt-tx-updater' ); ?></label></th>
+						<th><label for="wptxu-tx-username"><?php _e( 'transifex Username', 'wpt-tx-updater' ); ?></label></th>
 						<td>
 								<input type="text" name="wptxu-tx-username" id="wptxu-tx-username" value="<?php echo esc_attr( get_the_author_meta( 'wptxu-tx-username', $user->ID ) ); ?>" class="regular-text" /><br />
-								<span class="description"><?php _e( 'Please enter your Transifex username.', 'wpt-tx-updater' ); ?></span>
+								<span class="description"><?php _e( 'Please enter your transifex username.', 'wpt-tx-updater' ); ?></span>
 						</td>
 				</tr>
 				<tr>
-						<th><label for="wptxu-tx-password"><?php _e( 'Transifex Password', 'wpt-tx-updater' ); ?></label></th>
+						<th><label for="wptxu-tx-password"><?php _e( 'transifex Password', 'wpt-tx-updater' ); ?></label></th>
 						<td>
 								<input type="password" name="wptxu-tx-password" id="wptxu-tx-password" value="<?php echo esc_attr( get_the_author_meta( 'wptxu-tx-password', $user->ID ) ); ?>" class="regular-text" /><br />
-								<span class="description"><?php _e( 'Please enter your Transifex password.', 'wpt-tx-updater' ); ?></span>
+								<span class="description"><?php _e( 'Please enter your transifex password.', 'wpt-tx-updater' ); ?></span>
 						</td>
 				</tr>
 
