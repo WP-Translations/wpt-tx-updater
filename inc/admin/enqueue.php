@@ -21,7 +21,7 @@ function wptxu_load_admin_assets() {
 
 	$translation_array = array(
 		'ajax_loading' => __( 'Check for update...', 'wpt-tx-updater' ),
-		'license_deactivate' => 'WPT tx updater : '.__( 'License deactivate', 'wpt-tx-updater' ),
+		'license_deactivate' => 'WPT tx updater : '.__( 'Deactivate License', 'wpt-tx-updater' ),
 		'ajax_fail' => __( 'Please try again soon.', 'wpt-tx-updater' ),
 	);
 

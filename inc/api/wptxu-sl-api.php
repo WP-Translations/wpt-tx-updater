@@ -47,7 +47,7 @@ function wptxu_sl_call( $action, $key ) {
 
 	// Make sure the response came back okay.
 	if ( is_wp_error( $remote_call ) ) {
-			$error_message = sprintf( __( '<p class="wptxu-error"><span class="dashicons dashicons-info"></span>There is a problem with remote site, please try again. %s</p>', 'wpt-tx-updater' ), $remote_call->get_error_message() );
+			$error_message = '<p class="wptxu-error"><span class="dashicons dashicons-info"></span>' . __( 'There is a problem with remote site, please try again.', 'wpt-tx-updater' ) . ' ' . $remote_call->get_error_message() . '</p>';
 			return $error_message;
 	} else {
 		// Decode the license data.
